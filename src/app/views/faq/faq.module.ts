@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FaqComponent } from './faq.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -9,7 +9,7 @@ import { FaqComponent } from './faq.component';
     FaqComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class FaqModule { }

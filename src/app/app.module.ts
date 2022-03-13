@@ -24,6 +24,7 @@ import { DonateModule } from './views/donate/donate.module';
 import { TeachersModule } from './views/teachers/teachers.module';
 import { RegistrationModule } from './views/registration/registration.module';
 import { FaqModule } from './views/faq/faq.module';
+import { PageNotFoundModule } from './views/page-not-found/page-not-found.module';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FaqModule } from './views/faq/faq.module';
     TeachersModule,
     RegistrationModule,
     FaqModule,
+    PageNotFoundModule,
     AppRoutingModule,
   ],
   providers: [

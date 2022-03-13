@@ -7,7 +7,7 @@
     overflow: hidden;
 
     &.style2 {
-        background-image: url('https://via.placeholder.com/1920x800');
+        background-image: url('../assets/images/hero/matrix_code.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left;
@@ -24,7 +24,7 @@
             h1 {
                 font-size: 40px;
                 line-height: 55px;
-                color: $black;
+                color: $white;
 
                 span {
                     font-weight: 400;
@@ -33,7 +33,7 @@
             }
 
             p {
-                color: $black;
+                color: $white;
             }
 
             .button {

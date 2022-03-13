@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DonateComponent } from './donate.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -9,7 +9,7 @@ import { DonateComponent } from './donate.component';
     DonateComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class DonateModule { }

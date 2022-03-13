@@ -6,6 +6,7 @@ import { DonateComponent } from './views/donate/donate.component';
 import { FaqComponent } from './views/faq/faq.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { RegistrationComponent } from './views/registration/registration.component';
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'aboutus',
+    path: 'about',
     component: AboutComponent
   },
   {
@@ -38,9 +39,13 @@ const routes: Routes = [
     component: RegistrationComponent
   },
   {
-    path: '**',
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

@@ -5,7 +5,7 @@
     &.style2.navbar-area {
         position: absolute;
         width: 100%;
-        transition: all 0.4s ease;
+        transition: all 0.75s ease;
 
         &.sticky {
             position: fixed;
@@ -64,7 +64,7 @@
     width: 100%;
     z-index: 99;
     transition: all 0.3s ease-out 0s;
-    background: rgb(163, 163, 163);;
+    background: rgb(202, 202, 202);;
 }
 
 .sticky {
@@ -228,6 +228,9 @@
     span {
       display: flex;
       align-items: center;
+      h3 {
+        padding-left: .5rem;
+      }
       b {
         color: $theme-color;
       }
@@ -235,7 +238,8 @@
 }
 
 .navbar-brand img {
-    width: 60px;
+    width: 3.5rem;
+    max-width: 60px;
 }
 
 .mobile-menu-btn {
@@ -351,7 +355,7 @@
         -webkit-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s;
         z-index: 5;
-        border: 8px solid #0EDC8D;
+        border: 8px solid lighten($color: $theme-color, $amount: 10);
         border-radius: 0;
         border-bottom-color: transparent !important;
         width: auto !important;
@@ -379,7 +383,7 @@
     color: $theme-color;
 }
 
-.navbar-nav .nav-item a.dd-menu {}
+// .navbar-nav .nav-item a.dd-menu {}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .navbar-nav .nav-item a.dd-menu {
@@ -580,7 +584,7 @@
     }
 
     .nav-inner {
-        padding: 25px 0;
+        padding: 10px 0;
     }
 
     .navbar-nav .nav-item .sub-menu>li.active {

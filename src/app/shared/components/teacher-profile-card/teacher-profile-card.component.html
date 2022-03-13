@@ -1,0 +1,33 @@
+<!-- Single Team -->
+<div [ngClass]="size">
+  <div class="single-team wow fadeInUp" data-aos="fade-up">
+      <div class="row">
+          <div class="col-lg-5 col-12">
+              <!-- Image -->
+              <div class="image">
+                  <img src="https://via.placeholder.com/800x1020" alt="#">
+              </div>
+              <!-- End Image -->
+          </div>
+          <div class="col-lg-7 col-12">
+              <div class="info-head">
+                  <!-- Info Box -->
+                  <div class="info-box">
+                      <span class="designation">
+                        <span class="badge badge-primary" *ngFor="let role of teacher?.role; let i = index;">{{role + ', '}}</span>
+                      </span>
+                      <h4 class="name"><a [routerLink]="['/teachers/teacher/', teacher?.id]">{{teacher?.name}}</a></h4>
+                      <p></p>
+                  </div>
+                  <!-- End Info Box -->
+                  <!-- Social -->
+                  <ul class="social">
+                      <li *ngFor="let social of teacher?.socialLinks; let i = index;"><a [routerLink]="social.url"><i [class]="social.icon"></i></a></li>
+                  </ul>
+                  <!-- End Social -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Single Team -->
