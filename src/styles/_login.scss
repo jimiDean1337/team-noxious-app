@@ -87,6 +87,41 @@
                     }
                 }
             }
+
+            .btn-google {
+              background: $google;
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0;
+                background-color: rgba(255,255,255,.5);
+                content: "";
+                transition: all 0.4s ease-in-out;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $google;
+            }
+            }
+
+            .btn-twitter {
+              background: $twitter;
+            }
+
+            .btn-github {
+              background: $github;
+            }
+
+            .btn-facebook {
+              background: $facebook;
+            }
         }
     }
 }

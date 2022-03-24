@@ -1,16 +1,46 @@
 /*======================================
     Hero Area CSS
 ========================================*/
+@import url('http://fonts.cdnfonts.com/css/matrix');
 .hero-area {
     position: relative;
     background-color: $gray;
     overflow: hidden;
 
     &.style2 {
-        background-image: url('../assets/images/hero/matrix_code.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left;
+      canvas {
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        font-family: 'Matrix', sans-serif !important;
+      }
+      // background-image: url('../assets/images/hero/matrix_code.jpg');
+      //   background-size: cover;
+      //   background-repeat: no-repeat;
+      //   background-position: left;
+      //   video {
+      //     width: 100%;
+      //     min-height: 840px;
+      //     left: 0;
+      //     position: absolute;
+      //     top: 0;
+      //     z-index: -1;
+      //   }
+
+        @media screen and (max-width: 1200px) {
+          canvas {
+            min-height: calc(700px);
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          canvas {
+            min-height: 600px;
+          }
+        }
 
         .hero-text {
             margin-top: 240px !important;

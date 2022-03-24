@@ -1,0 +1,107 @@
+<tna-breadcrumb [currentLocation]="'Dashboard'" [pageTitle]="'Dashboard'" [pageDescription]="'Team Noxious User dahsboard including profile, account and course information'"></tna-breadcrumb>
+<div class="dashboard pb-5" *ngIf="currentUser">
+  <div class="container">
+    <div class="section-title mt-5">
+      <span data-aos="fade-up">Team Noxious</span>
+      <h2 data-aos="fade-up">User Profile</h2>
+      <!-- <p data-aos="fade-up">Name, username, and other basic information</p> -->
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-4">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <img [src]="currentUser.avatar" alt="User Profile Picture" [srcset]="currentUser.avatar" class="rounded-circle">
+                  <!-- <h3 class="card-title">Profile Card</h3> -->
+                  <div class="card-tools">
+                    <p>{{currentUser.username}}</p>
+                    <p>{{currentUser.email}}</p>
+
+                    <span class="badge badge-primary text-dark" *ngFor="let tag of currentUser.interests">{{tag}}</span>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <h5>Courses</h5>
+                  <ul class="list-group">
+                    <li *ngFor="let item of currentUser.courses.inProgress" class="list-group-item border-0 d-inline-flex align-content-around"><span>Course: {{item.courseId}}</span>Chapter: {{item.chapter}}</li>
+
+                  </ul>
+                </div>
+                <!-- /.card-body -->
+
+              </div>
+              <!-- /.card -->
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-12">
+              <div class="container">
+                <div class="section-title mt-5">
+                  <span data-aos="fade-up">Team Noxious</span>
+                  <h2 data-aos="fade-up">Notifications</h2>
+                  <p data-aos="fade-up">Team Noxious Messages, Course, and Forums notifications</p>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        <h3 class="card-title">Notifications Card</h3>
+                        <div class="card-tools">
+
+                          <span class="badge badge-primary">Label</span>
+                        </div>
+                        <!-- /.card-tools -->
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body">
+                        The body of the card
+                      </div>
+                      <!-- /.card-body -->
+
+                    </div>
+                    <!-- /.card -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="container">
+          <div class="section-title mt-5">
+            <span data-aos="fade-up">Team Noxious</span>
+            <h2 data-aos="fade-up">Recent Courses</h2>
+            <p data-aos="fade-up">For a more detailed course list, visit the courses home page.</p>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="card card-primary">
+                <div class="card-header">Course Card</div>
+                <div class="card-body">Course Card Content</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card card-primary">
+                <div class="card-header">Course Card</div>
+                <div class="card-body">Course Card Content</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card card-primary">
+                <div class="card-header">Course Card</div>
+                <div class="card-body">Course Card Content</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

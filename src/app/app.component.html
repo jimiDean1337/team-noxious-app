@@ -1,16 +1,54 @@
-<!-- Preloader -->
-<div class="preloader" hidden>
-  <div class="preloader-inner">
-    <div class="preloader-icon">
-      <span></span>
-      <span></span>
+<!-- Start Header Area -->
+<header class="header style2 navbar-area" id="top">
+  <!-- Toolbar Start -->
+  <div class="toolbar-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-6 col-12">
+          <div class="toolbar-social">
+            <ul>
+              <li><span class="title">Follow Us On : </span></li>
+              <li>
+                <a href="javascript:void(0)"
+                  ><i class="lni lni-facebook-original"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"
+                  ><i class="lni lni-twitter-original"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"
+                  ><i class="lni lni-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"
+                  ><i class="lni lni-linkedin-original"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="lni lni-google"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- TODO: Educator Login -->
+        <!-- <div class="col-lg-4 col-md-6 col-12">
+          <div class="toolbar-login">
+            <div class="button" *ngIf="!(loggedIn | async)">
+              <a routerLink="/registration">Create an Account</a>
+              <a routerLink="/login" class="btn">Log In</a>
+            </div>
+            <div class="button" *ngIf="loggedIn | async">
+              <a href="javascript:void(0)" (click)="signOut()">Sign Out</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
     </div>
   </div>
-</div>
-<!-- /End Preloader -->
-
-<!-- Start Header Area -->
-<header class="header style2 navbar-area">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-12">
@@ -29,8 +67,8 @@
             <button
               class="navbar-toggler mobile-menu-btn"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
+              (ngClick)="toggleMobileNav()"
+              [ngClass]="showMobileMenu ? 'active' : ''"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
@@ -86,7 +124,102 @@
                   <a routerLink="/faq" routerLinkActive="active">FAQ</a>
                 </li>
               </ul>
-              <form class="d-xl-flex search-form d-none">
+              <div *ngIf="loggedIn | async; else noAuth">
+                <div
+                  class="ms-3 btn-group"
+                  dropdown
+                  [placement]="'bottom left'"
+                  id="userMenuDropdown"
+                >
+                  <button
+                    id="userMenu"
+                    dropdownToggle
+                    type="button"
+                    class="btn btn-link text-light dropdown-toggle"
+                    aria-controls="dropdown-basic"
+                    style="text-decoration: none"
+                  >
+                    <i class="lni lni-user"></i> <span class="caret"></span>
+                  </button>
+                  <ul
+                    id="userMenuDropdown"
+                    *dropdownMenu
+                    class="dropdown-menu dropdown-menu-left"
+                    role="menu"
+                    aria-labelledby="userMenu"
+                  >
+                    <li role="menuitem">
+                      <a class="dropdown-item" [routerLink]="['user', (loggedIn | async)?.uid, 'dashboard']"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <a
+                        class="dropdown-item"
+                        [routerLink]="['user', (loggedIn | async)?.uid, 'profile']"
+                        >Profile</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <a
+                        class="dropdown-item"
+                        [routerLink]="['user', (loggedIn | async)?.uid, 'account']"
+                        >Account</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <a
+                        class="dropdown-item"
+                        [routerLink]="['user', (loggedIn | async)?.uid, 'courses']"
+                        >Courses</a
+                      >
+                    </li>
+                    <li class="divider dropdown-divider"></li>
+                    <li role="menuitem">
+                      <a class="dropdown-item" (click)="signOut()">Sign Out</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ng-template #noAuth>
+                <div
+                  class="ms-3 btn-group"
+                  dropdown
+                  [placement]="'bottom left'"
+                  id="userMenuDropdown"
+                >
+                  <button
+                    id="userMenu"
+                    dropdownToggle
+                    type="button"
+                    class="btn btn-link text-light dropdown-toggle"
+                    aria-controls="dropdown-basic"
+                    style="text-decoration: none"
+                  >
+                    <i class="lni lni-user"></i> <span class="caret"></span>
+                  </button>
+                  <ul
+                    id="userMenuDropdown"
+                    *dropdownMenu
+                    class="dropdown-menu dropdown-menu-left"
+                    role="menu"
+                    aria-labelledby="userMenu"
+                  >
+                    <li role="menuitem">
+                      <a class="dropdown-item" [routerLink]="['login']"
+                        >Login</a
+                      >
+                    </li>
+                    <li class="divider dropdown-divider"></li>
+                    <li role="menuitem">
+                      <a class="dropdown-item" [routerLink]="['registration']"
+                        >Create an Account</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </ng-template>
+              <!-- <form class="d-xl-flex search-form d-none">
                 <input
                   class="form-control me-2"
                   type="search"
@@ -96,7 +229,7 @@
                 <button class="btn btn-outline-success" type="submit">
                   <i class="lni lni-search-alt"></i>
                 </button>
-              </form>
+              </form> -->
             </div>
             <!-- navbar collapse -->
           </nav>
@@ -168,7 +301,7 @@
                   <li><a href="javascript:void(0)">Terms & Conditions</a></li>
                   <li><a href="javascript:void(0)">Support Team</a></li>
                   <li><a href="javascript:void(0)">Our Advisor</a></li>
-                  <li><a href="javascript:void(0)">Return Policy</a></li>
+                  <li><a href="javascript:void(0)">s Policy</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -178,11 +311,11 @@
               <div class="single-footer sm-custom-border f-link">
                 <h3>Courses</h3>
                 <ul>
-                  <li><a href="javascript:void(0)">Web Design</a></li>
-                  <li><a href="javascript:void(0)">Graphics Desing</a></li>
-                  <li><a href="javascript:void(0)">App Development</a></li>
-                  <li><a href="javascript:void(0)">CPA Marketing</a></li>
-                  <li><a href="javascript:void(0)">Digital Marketing</a></li>
+                  <li><a href="javascript:void(0)">Join Discord</a></li>
+                  <li><a href="javascript:void(0)">Our Staff</a></li>
+                  <li><a href="javascript:void(0)">Future Plans</a></li>
+                  <li><a href="javascript:void(0)">Sponsors</a></li>
+                  <li><a href="javascript:void(0)">Marketing</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -193,8 +326,6 @@
                 <h3>Newsletter</h3>
                 <p>Subscribe to us to always stay in touch with us.</p>
                 <form
-                  action="mail/mail.php"
-                  method="get"
                   target="_blank"
                   class="newsletter-form"
                 >
@@ -229,10 +360,10 @@
             <div class="left">
               <p>
                 Designed and Developed by<a
-                  href="https://graygrids.com/"
+                  href="#"
                   rel="nofollow"
                   target="_blank"
-                  >GrayGrids</a
+                  >Team Noxious</a
                 >
               </p>
             </div>
@@ -245,7 +376,18 @@
 </footer>
 <!--/ End Footer Area -->
 
+<!-- Preloader -->
+<div class="preloader" *ngIf="loading">
+  <div class="preloader-inner">
+    <div class="preloader-icon">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+<!-- /End Preloader -->
+
 <!-- ========================= scroll-top ========================= -->
-<a href="#" class="scroll-top btn-hover">
+<a (click)="scrollToTop()" class="scroll-top btn-hover">
   <i class="lni lni-chevron-up"></i>
 </a>

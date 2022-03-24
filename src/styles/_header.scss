@@ -10,7 +10,7 @@
         &.sticky {
             position: fixed;
             z-index: 99;
-            background-color: rgb(163, 163, 163);
+            background-color: rgb(19, 19, 19);
             box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease-out 0s;
             top: 0;
@@ -34,7 +34,7 @@
         .header-social {
             display: inline-block;
             margin-left: 100px;
-            float: right;
+            // float: right;
 
             ul {
                 li {
@@ -64,13 +64,13 @@
     width: 100%;
     z-index: 99;
     transition: all 0.3s ease-out 0s;
-    background: rgb(202, 202, 202);;
+    background: rgb(19,19,19);;
 }
 
 .sticky {
     position: fixed;
     z-index: 99;
-    background-color: #fff;
+    background-color: rgb(19, 19, 19);
     box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease-out 0s;
     top: 0;
@@ -81,7 +81,7 @@
 }
 
 .sticky .navbar .navbar-nav .nav-item a {
-    color: #333;
+    color: $white;
 }
 
 .header .navbar .navbar-nav .nav-item a.active {
@@ -106,7 +106,7 @@
 
 /* Topbar */
 .header .toolbar-area {
-    padding: 12px 0;
+    padding: 8px 0;
     background: $theme-color;
 }
 
@@ -214,7 +214,7 @@
 }
 
 .header {
-    background-color: rgb(163, 163, 163);;
+    background-color: rgb(19,19,19);;
 }
 
 .navbar {
@@ -229,6 +229,7 @@
       display: flex;
       align-items: center;
       h3 {
+        color: $white;
         padding-left: .5rem;
       }
       b {
@@ -327,7 +328,7 @@
 
 .navbar-nav .nav-item a {
     font-size: 16px;
-    color: #051441;
+    // color: #051441;
     transition: all 0.3s ease-out 0s;
     position: relative;
     padding: 35px 0;
@@ -335,7 +336,7 @@
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    color: #333;
+    color: $white;
     transition: all 0.3s ease-out 0s;
     position: relative;
     text-transform: capitalize;
@@ -355,7 +356,7 @@
         -webkit-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s;
         z-index: 5;
-        border: 8px solid lighten($color: $theme-color, $amount: 10);
+        border: 8px solid $theme-color;
         border-radius: 0;
         border-bottom-color: transparent !important;
         width: auto !important;

@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { GalleryModule } from  'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
+import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideMessaging,getMessaging } from '@angular/fire/messaging';
-import { providePerformance,getPerformance } from '@angular/fire/performance';
-import { provideStorage,getStorage } from '@angular/fire/storage';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './views/login/login.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -25,6 +20,8 @@ import { TeachersModule } from './views/teachers/teachers.module';
 import { RegistrationModule } from './views/registration/registration.module';
 import { FaqModule } from './views/faq/faq.module';
 import { PageNotFoundModule } from './views/page-not-found/page-not-found.module';
+import { UserModule } from './views/user/user.module';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -32,15 +29,11 @@ import { PageNotFoundModule } from './views/page-not-found/page-not-found.module
   ],
   imports: [
     BrowserModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    provideMessaging(() => getMessaging()),
-    providePerformance(() => getPerformance()),
-    provideStorage(() => getStorage()),
     BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    AlertModule.forRoot(),
+    GalleryModule,
+    LightboxModule,
     LoginModule,
     CoreModule,
     SharedModule,
@@ -53,10 +46,17 @@ import { PageNotFoundModule } from './views/page-not-found/page-not-found.module
     RegistrationModule,
     FaqModule,
     PageNotFoundModule,
+    UserModule,
     AppRoutingModule,
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    CookieService,
+    {
+      provide: LIGHTBOX_CONFIG,
+      useValue: {
+        keyboardShortcuts: true,
+      }
+    },
   ],
   bootstrap: [AppComponent]
 })

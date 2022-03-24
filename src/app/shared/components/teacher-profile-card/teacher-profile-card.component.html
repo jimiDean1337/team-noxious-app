@@ -1,5 +1,4 @@
 <!-- Single Team -->
-<div [ngClass]="size">
   <div class="single-team wow fadeInUp" data-aos="fade-up">
       <div class="row">
           <div class="col-lg-5 col-12">
@@ -22,12 +21,11 @@
                   <!-- End Info Box -->
                   <!-- Social -->
                   <ul class="social">
-                      <li *ngFor="let social of teacher?.socialLinks; let i = index;"><a [routerLink]="social.url"><i [class]="social.icon"></i></a></li>
+                      <li *ngFor="let social of teacher?.socialLinks; let i = index;"><a [routerLink]="social.url"><i [class]="'lni ' + social.icon"></i></a></li>
                   </ul>
                   <!-- End Social -->
               </div>
           </div>
       </div>
   </div>
-</div>
 <!-- End Single Team -->

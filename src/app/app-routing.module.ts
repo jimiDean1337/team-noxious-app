@@ -8,6 +8,8 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { RegistrationComponent } from './views/registration/registration.component';
+import { UserComponent } from './views/user/user.component';
+import { UserModule } from './views/user/user.module';
 
 const routes: Routes = [
   {
@@ -31,6 +33,10 @@ const routes: Routes = [
     component: FaqComponent
   },
   {
+    path: 'user/:userId',
+    loadChildren: () => import('./views/user/user.module').then(module => UserModule)
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
@@ -43,10 +49,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
+  // {
+  //   path: '**',
+  //   component: PageNotFoundComponent,
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({
