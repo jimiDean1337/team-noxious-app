@@ -17,6 +17,8 @@ export class ProfileComponent implements OnInit {
   alert: any = {
     show: false,
     type: 'success',
+    useTemplate: false,
+    dismisOnTimeout: 15000,
     content: {
       title: 'Oh Snap!',
       text: 'User data has been updated!',
@@ -26,21 +28,27 @@ export class ProfileComponent implements OnInit {
 
   constructor(private cookie: CookieService, private userService: UserService, private route: ActivatedRoute) { }
 
-  updateUser(uid: string, data: User) {
-    return this.userService.update(uid, data)
-    .then(results => {
-      this.alert.show = true;
-    })
+  public async update(uid: any, data: User) {
+    const results = await this.userService.update(uid, data)
+    console.log('User Profile Updated', results)
+    this.alert.show = true;
+    this.alert.useTemplate = true;
+    this.alert.content.title = `Oh yeah!`;
+    this.alert.content.html = `<p>User Profile has been updated!</p>`;
   }
 
-  closeAlert(e: any) {
+  public closeAlert(e: any) {
     this.alert.show = false;
     console.log('Alert was closed.', e)
   }
 
+  openFileService(event: any) {
+
+  }
+
   ngOnInit(): void {
     const uid = this.cookie.get('USER_ID')
-    this.userService.getUserById(uid).valueChanges({idField: false})
+    this.userService.getUserById(uid).valueChanges({idField: true})
     .subscribe(user => {
       console.log(user)
       this.currentUser = user;

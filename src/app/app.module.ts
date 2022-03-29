@@ -30,8 +30,8 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
-    AlertModule.forRoot(),
+    // BsDropdownModule.forRoot(),
+    // AlertModule.forRoot(),
     GalleryModule,
     LightboxModule,
     LoginModule,

@@ -1,3 +1,7 @@
+<tna-breadcrumb [pageTitle]="'Profile'" [currentLocation]="'Profile'" [pageDescription]="'Team Noxious basic user profile information'"></tna-breadcrumb>
+<alert [isOpen]="alert.show" [type]="alert.type" [dismissOnTimeout]="alert.dismisOnTimeout" [dismissible]="true" (onClose)="closeAlert($event)">{{alert.content.title}}
+  <span *ngIf="alert.useTemplate" [innerHtml]="alert.content.html"></span>
+</alert>
 <div class="container rounded bg-white mt-5 mb-5 pt-5" id="userProfile">
   <div class="row">
     <div class="col-md-3 border-right">
@@ -14,134 +18,113 @@
     <div class="col-md-5 border-right">
       <div class="p-3 py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="text-right">Profile Settings</h4>
+          <h4 class="text-right">Basic Information</h4>
         </div>
-        <div class="row mt-2">
-          <div class="col-md-6">
-            <label class="labels">First Name</label
-            ><input
-              [(ngModel)]="updateModel.firstname"
-              #firstname
-              type="text"
-              class="form-control"
-              placeholder="first name"
-              [value]="currentUser?.firstname"
-            />
+        <form #profileForm="ngForm" name="profileForm" class="form">
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="labels">First Name</label
+                ><input
+                  [(ngModel)]="updateModel.firstname"
+                  #firstname
+                  type="text"
+                  class="form-control"
+                  placeholder="first name"
+                  [value]="currentUser?.firstname"
+                />
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="labels">Last Name</label
+                ><input
+                  [(ngModel)]="updateModel.lastname"
+                  #lastname
+                  type="text"
+                  class="form-control"
+                  [value]="currentUser?.lastname"
+                  placeholder="surname"
+                />
+
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <label class="labels">Last Name</label
-            ><input
-              [(ngModel)]="updateModel.lastname"
-              #lastname
-              type="text"
-              class="form-control"
-              [value]="currentUser?.lastname"
-              placeholder="surname"
-            />
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="form-group">
+
+                <label class="labels">Username</label
+                  ><input
+                  [(ngModel)]="updateModel.lastname"
+                  #username
+                  type="text"
+                  class="form-control"
+                  [value]="currentUser?.username"
+                  placeholder="Username"
+                  />
+                </div>
+            </div>
           </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-12">
-            <label class="labels">Mobile Number</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter phone number"
-              value=""
-            />
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="labels">Email <span class="text-muted">(Not Editable)</span></label
+                  ><input
+                  disabled
+                    type="email"
+                    class="form-control disabled"
+                    [value]="currentUser?.email"
+                    placeholder="you@email.com"
+                  />
+
+              </div>
+            </div>
           </div>
-          <div class="col-md-12">
-            <label class="labels">Address Line 1</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter address line 1"
-              value=""
-            />
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="form-group">
+                <label class="labels">Avatar</label>
+                <tabset class="tab-pane">
+                  <tab heading="Upload Avatar" id="tab1">
+                    <input
+                        [(ngModel)]="updateModel.avatar"
+                        #avatar
+                        type="file"
+                        (change)="openFileService($event)"
+                        class="form-control mt-1"
+                        [value]="currentUser?.avatar"
+                      />
+                  </tab>
+                  <tab heading="Paste Avatar URL">
+                    <input
+                        [(ngModel)]="updateModel.avatar"
+                        #avatar
+                        type="text"
+                        class="form-control mt-1"
+                        [value]="currentUser?.avatar"
+                      />
+                  </tab>
+                </tabset>
+
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group button text-center mt-3">
+                <button class="btn" type="button" (click)="update(currentUser?.idField, updateModel)" [disabled]="profileForm.errors">
+                  Update Profile
+                </button>
+
+              </div>
+            </div>
           </div>
-          <div class="col-md-12">
-            <label class="labels">Address Line 2</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter address line 2"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">Postcode</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter address line 2"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">State</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter address line 2"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">Area</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter address line 2"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">Email ID</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="enter email id"
-              value=""
-            />
-          </div>
-          <div class="col-md-12">
-            <label class="labels">Education</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="education"
-              value=""
-            />
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-            <label class="labels">Country</label
-            ><input
-              type="text"
-              class="form-control"
-              placeholder="country"
-              value=""
-            />
-          </div>
-          <div class="col-md-6">
-            <label class="labels">State/Region</label
-            ><input
-              type="text"
-              class="form-control"
-              value=""
-              placeholder="state"
-            />
-          </div>
-        </div>
-        <div class="mt-5 text-center">
-          <button class="btn btn-primary profile-button" type="button">
-            Save Profile
-          </button>
-        </div>
+        </form>
+
+
       </div>
     </div>
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
       <div class="p-3 py-5">
         <div
           class="d-flex justify-content-between align-items-center experience"
@@ -172,8 +155,7 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
-<alert *ngIf="alert.show" type="success" [dismissible]="true" (onClose)="closeAlert($event)">Alert</alert>

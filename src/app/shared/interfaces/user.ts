@@ -1,5 +1,6 @@
 export interface User {
   [prop: string]: any;
+  idField?: string;
   firstname?: string;
   lastname?: string;
   email?: string;
@@ -13,4 +14,9 @@ export interface User {
   courses?: any;
   roles?: string[];
   providerId?: string;
+}
+
+export interface UserAvatar {
+  src?: string;
+  isUrl?: boolean;
 }

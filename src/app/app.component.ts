@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import * as AOS from 'aos';
 import { filter, Observable, tap } from 'rxjs';
 import { AuthService } from './core/services/auth.service';

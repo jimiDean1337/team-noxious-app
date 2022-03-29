@@ -1,4 +1,4 @@
-TODO: Pages
+TODO: Pages:
   ☐ Home
   ☐ About
   ☐ Courses
@@ -11,9 +11,21 @@ TODO: Pages
   ☐ Donate
   ☐ FAQ
   ☐ User
-    TODO: Create USER data properties
+    TODO: Create USER data properties:
       ☐ Dashboard
       ☐ Profile
       ☐ Account
       ☐ Courses
 
+TODO: Features:
+  ☐ Avatar uploader and customizer
+  ☐ Donations
+  ☐ Animated SVG Loader
+  ☐ Route Guards
+  ☐ Theme Changer (Light/Dark/Contrast)
+
+TODO: Shared Components:
+  ☐ Teacher Card
+  ☐ Course Card
+  ☐ User Profile Card
+  ☐ Cookie Store

@@ -33,7 +33,7 @@ const routes: Routes = [
     component: FaqComponent
   },
   {
-    path: 'user/:userId',
+    path: 'user',
     loadChildren: () => import('./views/user/user.module').then(module => UserModule)
   },
   {
@@ -46,14 +46,14 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
-  // {
-  //   path: '**',
-  //   component: PageNotFoundComponent,
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

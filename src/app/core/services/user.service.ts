@@ -3,22 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import * as moment from 'moment';
 import { DataService } from './data.service';
-
-interface User {
-  firstname?: string;
-  lastname?: string;
-  email?: string;
-  username?: string;
-  linkedAccounts?: any[];
-  joinedOn?: Date;
-  interests?: string[];
-  avatar?: any;
-  level?: string;
-  isPremium?: boolean;
-  courses?: any;
-  roles?: string[];
-  providerId?: string;
-}
+import { User } from 'src/app/shared/interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -84,12 +69,11 @@ export class UserService {
   }
 
   public update(uid: string, data: User) {
-    // TODO: Finish
     return this.dataService.getDocument('users', uid).update(data);
   }
 
   public delete(uid: string) {
-    // TODO: Finish
+    return this.dataService.getDocument('users', uid).delete();
   }
 
 
