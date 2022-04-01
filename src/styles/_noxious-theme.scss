@@ -1,19 +1,15 @@
-/* ngx-chips noxious-theme styles */
-
 @import "node_modules/ngx-chips/core/styles/core/_core.scss";
 
-$noxious-primary: #3ED12B;
+$noxious-primary: $team-noxious;
 $noxious-primary-dark: darken($noxious-primary, 10%);
 $noxious-tag-height: 50px !important;
 $noxious-tag-padding: .5rem .45rem !important;
 $noxious-tag-border-radius: 0 !important;
-$noxious-container-border-bottom: 2px solid #d0d0d0 !important;
-$noxious-container-border-bottom-focused: 2px solid $noxious-primary !important;
+$noxious-container-border-bottom: none !important;
 
 // this is the container's theme
 $noxious-theme: (
-    container-border-bottom: $noxious-container-border-bottom,
-    container-border-bottom-focused: $noxious-container-border-bottom-focused
+    container-border-bottom: $noxious-container-border-bottom
 );
 
 // this is the tag's theme
@@ -24,7 +20,7 @@ $noxious-tag-theme: (
     background-hover: $noxious-primary-dark,
     color: #fff,
     color-hover: #fff,
-    height: $noxious-tag-height,
+    min-height: $noxious-tag-height,
     padding: $noxious-tag-padding,
     border-radius: $noxious-tag-border-radius
 );

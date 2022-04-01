@@ -7,7 +7,7 @@ export interface User {
   username?: string;
   linkedAccounts?: any[];
   joinedOn?: Date;
-  interests?: string[];
+  interests?: any[];
   avatar?: any;
   level?: string;
   isPremium?: boolean;

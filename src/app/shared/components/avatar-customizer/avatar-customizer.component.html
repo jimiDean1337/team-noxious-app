@@ -1,1 +1,26 @@
-<p>avatar-customizer works!</p>
+<div id="avatarCustomizer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="avatar">
+          <img [src]="url" [alt]="'User Avatar Image'">
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">Adavanced Avatars</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="avatarType" class="form-label">Select Type</label>
+              <select class="form-control" name="avatarType" id="avatarType">
+                <option *ngFor="let type of defaults['advanced'].sprites; let i = index;">{{type}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6"></div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+</div>

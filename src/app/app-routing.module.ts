@@ -32,10 +32,10 @@ const routes: Routes = [
     path: 'faq',
     component: FaqComponent
   },
-  {
-    path: 'user',
-    loadChildren: () => import('./views/user/user.module').then(module => UserModule)
-  },
+  // {
+  //   path: 'user',
+  //   loadChildren: () => import('./views/user/user.module').then(module => UserModule)
+  // },
   {
     path: 'login',
     component: LoginComponent

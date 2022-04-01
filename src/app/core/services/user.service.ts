@@ -69,7 +69,7 @@ export class UserService {
   }
 
   public update(uid: string, data: User) {
-    return this.dataService.getDocument('users', uid).update(data);
+    return this.dataService.getDocument('users', uid).update({...data});
   }
 
   public delete(uid: string) {

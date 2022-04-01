@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserResolver } from 'src/app/resolvers/user.resolver';
+// import { UserResolver } from 'src/app/resolvers/user.resolver';
 import { CoursesComponent } from './courses/courses.component';
 import { AccountComponent } from './account/account.component';
 import { DashboardComponent } from './dashboard/dashboard.component';

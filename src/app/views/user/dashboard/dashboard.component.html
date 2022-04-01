@@ -19,7 +19,7 @@
                     <p>{{currentUser.username}}</p>
                     <p>{{currentUser.email}}</p>
 
-                    <span class="badge badge-primary text-dark" *ngFor="let tag of currentUser.interests">{{tag}}</span>
+                    <span class="badge badge-primary text-dark" *ngFor="let tag of currentUser.interests">{{tag.display}}</span>
                   </div>
                   <!-- /.card-tools -->
                 </div>

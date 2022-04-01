@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { SortableModule } from 'ngx-bootstrap/sortable';
+import { RatingModule } from 'ngx-bootstrap/rating';
 import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
@@ -22,7 +32,7 @@ import { FaqModule } from './views/faq/faq.module';
 import { PageNotFoundModule } from './views/page-not-found/page-not-found.module';
 import { UserModule } from './views/user/user.module';
 import { CookieService } from 'ngx-cookie-service';
-
+// import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,13 +40,25 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    // BsDropdownModule.forRoot(),
-    // AlertModule.forRoot(),
+    AccordionModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    AlertModule.forRoot(),
+    TabsModule.forRoot(),
+    PaginationModule.forRoot(),
+    PopoverModule.forRoot(),
+    ProgressbarModule.forRoot(),
+    TooltipModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    SortableModule.forRoot(),
+    RatingModule.forRoot(),
+    ModalModule.forRoot(),
+    // TagInputModule,
     GalleryModule,
     LightboxModule,
     LoginModule,
-    CoreModule,
     SharedModule,
+    CoreModule,
+    UserModule,
     AboutModule,
     HomeModule,
     ContactModule,
@@ -46,7 +68,6 @@ import { CookieService } from 'ngx-cookie-service';
     RegistrationModule,
     FaqModule,
     PageNotFoundModule,
-    UserModule,
     AppRoutingModule,
   ],
   providers: [

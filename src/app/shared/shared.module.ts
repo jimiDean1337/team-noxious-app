@@ -16,8 +16,11 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { RouterModule } from '@angular/router';
 import { TeacherProfileCardComponent } from './components/teacher-profile-card/teacher-profile-card.component';
 import { CourseCardComponent } from './components/course-card/course-card.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AvatarCustomizerComponent } from './components/avatar-customizer/avatar-customizer.component';
+import { TagInputModule } from 'ngx-chips';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { CodingLanguagesGridComponent } from './components/coding-languages-grid/coding-languages-grid.component';
 
 
 
@@ -26,22 +29,24 @@ import { AvatarCustomizerComponent } from './components/avatar-customizer/avatar
     BreadcrumbComponent,
     TeacherProfileCardComponent,
     CourseCardComponent,
-    AvatarCustomizerComponent
+    AvatarCustomizerComponent,
+    CodingLanguagesGridComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-
+    NgxMasonryModule
   ],
   exports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
+    NgxMasonryModule,
     AccordionModule,
     BsDropdownModule,
     AlertModule,
     TabsModule,
-    ModalModule,
     PaginationModule,
     PopoverModule,
     ProgressbarModule,
@@ -49,10 +54,13 @@ import { AvatarCustomizerComponent } from './components/avatar-customizer/avatar
     TypeaheadModule,
     SortableModule,
     RatingModule,
+    ModalModule,
+    TagInputModule,
     BreadcrumbComponent,
     TeacherProfileCardComponent,
     CourseCardComponent,
     AvatarCustomizerComponent,
+    CodingLanguagesGridComponent,
   ]
 })
 export class SharedModule { }

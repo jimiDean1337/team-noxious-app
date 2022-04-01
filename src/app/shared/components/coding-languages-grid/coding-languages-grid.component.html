@@ -1,0 +1,26 @@
+<div class="coding-languages-grid-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title mt-5 px-4">
+          <span data-aos="fade-up">{{section?.title}}</span>
+          <h2 data-aos="fade-up">{{section?.subtitle}}</h2>
+          <p data-aos="fade-up">{{section?.description}}</p>
+        </div>
+      </div>
+      <div class="col-10 offset-2">
+        <ngx-masonry #masonry [ordered]="true" [options]="tagsOptions" [updateLayout]="true" (itemsLoaded)="itemsLoaded($event)" (layoutComplete)="layoutComplete($event)">
+          <div ngxMasonryItem #item class="grid-item mb-3 mx-auto" *ngFor="let item of list; let i = index;">
+            <div class="button" (click)="reorderLayout(i, item)">
+              <div class="btn" style="width: 140px; height: 115px;"><p class="mb-1"><i [ngClass]="item.icon" [style.font-size]="'3rem'"></i></p>
+                <p> {{item.name}}</p></div>
+            </div>
+          </div>
+        </ngx-masonry>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

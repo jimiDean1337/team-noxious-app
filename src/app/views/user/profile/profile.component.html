@@ -2,20 +2,33 @@
 <alert [isOpen]="alert.show" [type]="alert.type" [dismissOnTimeout]="alert.dismisOnTimeout" [dismissible]="true" (onClose)="closeAlert($event)">{{alert.content.title}}
   <span *ngIf="alert.useTemplate" [innerHtml]="alert.content.html"></span>
 </alert>
-<div class="container rounded bg-white mt-5 mb-5 pt-5" id="userProfile">
+<div class="container mt-5 mb-5 pt-5" id="userProfile">
+  <div class="row col-12">
+    <div class="section-title mt-5 px-4">
+      <span data-aos="fade-up">Team Noxious</span>
+      <h2 data-aos="fade-up">User Profile</h2>
+      <p data-aos="fade-up">Your basic profile info. This info is public and can be viewed by other Team Noxious members.</p>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-3 border-right">
-      <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-        <img
-          class="rounded-circle mt-5"
-          width="150px"
-          [src]="currentUser?.avatar"
-        /><span class="font-weight-bold">{{ currentUser?.username }}</span
-        ><span class="text-black-50">{{ currentUser?.email }}</span
-        ><span> </span>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+              <img
+                class="rounded-circle mt-5"
+                width="150px"
+                [src]="currentUser?.avatar"
+              /><span class="font-weight-bold">{{ currentUser?.username }}</span
+              ><span class="text-black-50">{{ currentUser?.email }}</span
+              ><span> </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-5 border-right">
+    <div class="col-md-9 border-right">
       <div class="p-3 py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h4 class="text-right">Basic Information</h4>
@@ -29,6 +42,7 @@
                   [(ngModel)]="updateModel.firstname"
                   #firstname
                   type="text"
+                  name="firstname"
                   class="form-control"
                   placeholder="first name"
                   [value]="currentUser?.firstname"
@@ -43,6 +57,7 @@
                   [(ngModel)]="updateModel.lastname"
                   #lastname
                   type="text"
+                  name="lastname"
                   class="form-control"
                   [value]="currentUser?.lastname"
                   placeholder="surname"
@@ -57,9 +72,10 @@
 
                 <label class="labels">Username</label
                   ><input
-                  [(ngModel)]="updateModel.lastname"
+                  [(ngModel)]="updateModel.username"
                   #username
                   type="text"
+                  name="username"
                   class="form-control"
                   [value]="currentUser?.username"
                   placeholder="Username"
@@ -74,6 +90,7 @@
                   ><input
                   disabled
                     type="email"
+                    name="email"
                     class="form-control disabled"
                     [value]="currentUser?.email"
                     placeholder="you@email.com"
@@ -83,7 +100,8 @@
             </div>
           </div>
           <div class="row mt-2">
-            <div class="col-12">
+            <!-- TODO: Add avatar file & text input to avatar customizer component -->
+            <!-- <div class="col-12">
               <div class="form-group">
                 <label class="labels">Avatar</label>
                 <tabset class="tab-pane">
@@ -91,25 +109,48 @@
                     <input
                         [(ngModel)]="updateModel.avatar"
                         #avatar
+                        name="avatarFile"
+                        id="avatarFile"
                         type="file"
                         (change)="openFileService($event)"
                         class="form-control mt-1"
-                        [value]="currentUser?.avatar"
                       />
                   </tab>
                   <tab heading="Paste Avatar URL">
                     <input
                         [(ngModel)]="updateModel.avatar"
                         #avatar
+                        name="avatarLink"
+                        id="avatarLink"
                         type="text"
                         class="form-control mt-1"
-                        [value]="currentUser?.avatar"
                       />
                   </tab>
                 </tabset>
 
               </div>
+            </div> -->
+            <div class="col-12">
+              <div class="form-group">
+                <label>Interests <span class="text-muted"> Add up to 3</span></label>
+                <tag-input [editable]="true" [maxItems]="3" [(ngModel)]="updateModel.interests" [ripple]="true" [theme]="'noxious-theme'" name="interestForm" [onlyFromAutocomplete]="true">
+                  <tag-input-dropdown [autocompleteItems]="defaults.interests" >
+                  </tag-input-dropdown>
+                </tag-input>
+              </div>
             </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="form-group button text-center mt-3">
+                <button class="btn btn-block" type="button" (click)="openModal(gridPicksModal, {class: 'gray modal-xl'})">
+                  Select Coding Languages and more
+                </button>
+
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
             <div class="col-12">
               <div class="form-group button text-center mt-3">
                 <button class="btn" type="button" (click)="update(currentUser?.idField, updateModel)" [disabled]="profileForm.errors">
@@ -158,4 +199,36 @@
     </div> -->
   </div>
 </div>
+
+<ng-template #avatarCustomizer>
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    <tna-avatar-customizer [url]="updateModel?.avatar"></tna-avatar-customizer>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef?.hide()">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #gridPicksModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Coding Interests</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <tna-coding-languages-grid [section]="codingGridContent"></tna-coding-languages-grid>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef?.hide()">Close</button>
+  </div>
+</ng-template>
+
+
 
