@@ -16,8 +16,6 @@ import { catchError } from 'rxjs';
 export class RegistrationComponent implements OnInit {
   formModel?: any = {};
 
-  // siteKey: string = '6Lc2GVMfAAAAAElk0YD2kNbaGelgI-zh3wwuNeek';
-
   constructor(
     private userService: UserService,
     private auth: AuthService,
@@ -41,9 +39,6 @@ export class RegistrationComponent implements OnInit {
   public async registerWithEmailAndPass(input: any) {
     /* TODO: Finish Recaptcha3 Setup
     let response: any;
-    const siteKey = '6LfNCD4fAAAAADp_z-m3opajJw-NzFJXXGx2o5Ta';
-    const secret = '6LfNCD4fAAAAAI9EC1N5NQV3dtVBfK4Bw5F9kiNP';
-    const token = await this.reCaptcha.executeAsPromise(siteKey, 'register', {useGlobalDomain: false});
     */
     const {firstname, lastname, email, username, pass} = input;
     try {

@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
     load: function() {console.log('Cap Reset')},
     success: function(e: any) {console.log('Cap Reset', e)},
   }
-  siteKey = '6LfNCD4fAAAAADp_z-m3opajJw-NzFJXXGx2o5Ta';
 
   constructor(
     private auth: AuthService,
