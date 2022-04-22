@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { map, Observable, switchMap } from 'rxjs';
 import * as moment from 'moment';
 import { DataService } from './data.service';
 import { User } from 'src/app/shared/interfaces/user';
@@ -9,7 +9,9 @@ import { User } from 'src/app/shared/interfaces/user';
   providedIn: 'root'
 })
 export class UserService {
-  userDefaults: User = {
+  private Users?: AngularFirestoreCollection<any>;
+  private user?: AngularFirestoreDocument<User>;
+  private userDefaults: User = {
     linkedAccounts: [],
     joinedOn: new Date(),
     interests: [
@@ -19,7 +21,7 @@ export class UserService {
     isPremium: false,
     courses: {
       inProgress: [
-        {courseId: 'welcome101', chapter: 1, startedOn: new Date(), isPremium: false}
+        {courseId: 'WELCOME', chapter: 1, startedOn: new Date(), isPremium: false}
       ]
     },
     roles: ['MEMBER']
@@ -28,7 +30,27 @@ export class UserService {
   constructor(public dataService: DataService) {
   }
 
-  public createFromEmail(firstname: string, lastname: string, email: string, username: string, userId: any) {
+  private get users() {
+    return this.Users = this.dataService.getCollection<User>('users');
+  }
+
+  public checkForUserById(userId: string) {
+    return this.users.valueChanges({ idField: true })
+    .pipe(map(users => {
+      return users.filter((user: User) => user.idField === userId).length > 0;
+    }))
+  }
+
+  public checkForUserByEmail(email: string) {
+    return this.dataService.getCollection<User>('users')
+    .valueChanges()
+      .pipe(
+        map(users => users.filter(user => user.email === email)),
+        map(users => !!users.length)
+    )
+  }
+
+  public createUserFromEmail(firstname: string, lastname: string, email: string, username: string, userId: any) {
     const props = {
       firstname,
       lastname,
@@ -38,21 +60,9 @@ export class UserService {
       providerId: '',
       ...this.userDefaults
     }
-    return this.dataService.getCollection('users').doc(userId).set(props)
+    return this.getUserById(userId).set(props)
   }
 
-  public createUserFromGithub(provider: any) {
-    const props = {
-      firstname: 'Not Set',
-      lastname: 'Not Set',
-      email: provider.user.email,
-      username: provider.user.displayName,
-      avatar: provider.additionalUserInfo.profile.avatar_url,
-      ...this.userDefaults
-    };
-    props.linkedAccounts?.push('Github');
-    return this.dataService.getCollection('users').doc(provider.user.uid).set(props)
-  }
 
   public createUserFromGoogle(provider: any) {
     const props = {
@@ -65,20 +75,32 @@ export class UserService {
     };
     props.linkedAccounts?.push('Google');
 
-    return this.dataService.getCollection('users').doc(provider.user.uid).set(props)
+    return this.getUserById(provider.user.uid).set(props)
+  }
+
+  public resetPassword(email: string) {
+    return this.checkForUserByEmail(email)
+    .pipe(switchMap((exists: boolean) => {
+      if (exists) {
+        this.dataService.getCollection('password-resets').add({ email, timestamp: new Date() });
+        return Promise.resolve(true)
+      } else {
+        return Promise.reject('Email not found');
+      }
+    }))
+
   }
 
   public update(uid: string, data: User) {
-    return this.dataService.getDocument('users', uid).update({...data});
+    return this.getUserById(uid).update({...data});
   }
 
   public delete(uid: string) {
-    return this.dataService.getDocument('users', uid).delete();
+    return this.getUserById(uid).delete();
   }
 
-
   public getUserById(userId: string): AngularFirestoreDocument<User> {
-    return this.dataService.getCollection('users').doc(userId);
+    return this.user = this.users.doc(userId);
   }
 
   public generateAvatar(firstname: string, lastname: string): string {
@@ -86,41 +108,6 @@ export class UserService {
     return `${url}name=${firstname}+${lastname}&background=3ed12b`;
   }
 }
-
-/* Github Auth AdditionalUserInfo Profile Properties
-avatar_url?: string;
-bio?: string;
-blog?: string;
-company?: string;
-created_at?: string;
-email?: string;
-events_url?: string;
-followers?: number;
-followers_url?: string;
-following?: number;
-following_url?: string;
-gists_url?: string;
-gravatar_id?: string;
-hireable?: boolean;
-html_url?: string;
-id?: number;
-location?: string;
-login?: string;
-name?: string;
-node_id?: string;
-organizations_url?: string;
-public_gists?: number;
-public_repos?: number;
-received_events_url?: string;
-repos_url?: string;
-site_admin?: boolean;
-starred_url?: string;
-subscriptions_url?: string;
-twitter_username?: string;
-type?: string;
-updated_at?: string;
-url?: string;
-*/
 
 /* Google Auth AdditionalUserInfo Profile Properties
 email?: string;

@@ -3,20 +3,20 @@
 ========================================*/
 .photo-gallery {
     img {
-        Width: 100%;
+        width: 100%;
         cursor: pointer;
     }
 
     .images {
         display: grid;
-        Grid-template-columns: repeat(8, 1fr);
-        Grid-gap: 1em 1em;
-        Margin-top: 1em;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 1em 1em;
+        margin-top: 1em;
     }
 
     @keyframes fadeIn {
         to {
-            Opacity: 1;
+            opacity: 1;
         }
     }
 

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class BreadcrumbComponent implements OnInit {
   @Input() pageTitle: string = '';
   @Input() pageDescription: string = '';
+  @Input() parent?: any;
   @Input() currentLocation: string = 'Current Location';
   constructor(private router: Router) { }
 

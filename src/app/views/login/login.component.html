@@ -29,7 +29,7 @@
                                   </div>
                               </div>
                               <div class="col-lg-6 col-12">
-                                  <a href="javascript:void(0)" class="lost-pass">Lost your password?</a>
+                                  <a routerLink="/password-reset" class="lost-pass">Lost your password?</a>
                               </div>
                           </div>
                       </div>
@@ -43,6 +43,22 @@
                         <button type="button" class="btn btn-google col" (click)="loginWithGoogle()"><i class="lni lni-google"></i> Google </button>
                       </div>
                   </form>
+                  <!-- <form [formGroup]="aFormGroup" style="z-index: 1000;">
+                    <ngx-invisible-recaptcha #captchaElem
+                      [siteKey]="siteKey"
+                      (reset)=" recaptchaConfig.reset()"
+                      (ready)=" recaptchaConfig.ready()"
+                      (load)=" recaptchaConfig.load()"
+                      (expire)=" recaptchaConfig.expire()"
+                      (success)=" recaptchaConfig.success($event)"
+                      [useGlobalDomain]="false"
+                      [type]="recaptchaConfig.type"
+                      [theme]="recaptchaConfig.theme"
+                      [badge]="recaptchaConfig.badge"
+                      [ngModel]="recaptchaConfig.recaptcha"
+                      [ngModelOptions]="{ standalone: true }">
+                    </ngx-invisible-recaptcha>
+                  </form> -->
               </div>
           </div>
       </div>

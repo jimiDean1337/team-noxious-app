@@ -1,3 +1,5 @@
+import { Verification } from "./verification";
+
 export interface User {
   [prop: string]: any;
   idField?: string;
@@ -14,6 +16,7 @@ export interface User {
   courses?: any;
   roles?: string[];
   providerId?: string;
+  verification?: Verification;
 }
 
 export interface UserAvatar {

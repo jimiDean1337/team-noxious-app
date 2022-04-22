@@ -66,6 +66,7 @@
   ],
   "courses": [
     {
+      "id": 0,
       "name": "JavaScript",
       "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
       "price": "$150",
@@ -96,7 +97,9 @@
           "caption": "Caption for this course image"
         }
       ],
-      "Educator": "Baby Ray",
+      "educators": [
+        {"name": "Baby Ray", "id": "EDU_001"}
+      ],
       "links": [
         {
           "name": "Udemy",
@@ -107,6 +110,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "Python",
       "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
       "price": "$120",
@@ -137,7 +141,9 @@
           "caption": "Caption for this course image"
         }
       ],
-      "Educator": "Baby Ray",
+      "educators": [
+        {"name": "Baby Ray", "id": "EDU_001"}
+      ],
       "links": [
         {
           "name": "Udemy",
@@ -148,6 +154,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "C#",
       "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
       "price": "$180",
@@ -178,7 +185,9 @@
           "caption": "Caption for this course image"
         }
       ],
-      "Educator": "Baby Ray",
+      "educators": [
+        {"name": "Baby Ray", "id": "EDU_001"}
+      ],
       "links": [
         {
           "name": "Udemy",
@@ -189,6 +198,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Bash",
       "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
       "price": "$100",
@@ -219,7 +229,9 @@
           "caption": "Caption for this course image"
         }
       ],
-      "Educator": "Baby Ray",
+      "educators": [
+        {"name": "Baby Ray", "id": "EDU_001"}
+      ],
       "links": [
         {
           "name": "Udemy",

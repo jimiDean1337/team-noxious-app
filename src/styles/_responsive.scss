@@ -395,9 +395,9 @@
     .photo-gallery {
         .images {
             display: grid;
-            Grid-template-columns: repeat(6, 1fr);
-            Grid-gap: 1em 1em;
-            Margin-top: 1em;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 1em 1em;
+            margin-top: 1em;
         }
     }
 
@@ -1283,9 +1283,9 @@
     .photo-gallery {
         .images {
             display: grid;
-            Grid-template-columns: repeat(4, 1fr);
-            Grid-gap: 1em 1em;
-            Margin-top: 1em;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1em 1em;
+            margin-top: 1em;
         }
     }
 

@@ -1,0 +1,262 @@
+[
+  {
+    "id": 0,
+    "name": "JavaScript",
+    "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
+    "details": {
+      "sections": [
+        {
+          "title": "Overview",
+          "html": "<h3 class=\"title\">Overview</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Ciriculum",
+          "html": "<h3 class=\"title\">Ciriculum</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Educator",
+          "html": "<h3 class=\"title\">Educator</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Reviews",
+          "html": "<h3 class=\"title\">Reviews</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        }
+      ]
+    },
+    "price": "Free",
+    "tags": [
+      "Web Development",
+      "JavaScript",
+      "Front-End",
+      "Back-End",
+      "Free"
+    ],
+    "reviews": {
+      "average": 5,
+      "list": []
+    },
+    "images": [
+      {
+        "type": "main",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      }
+    ],
+    "educators": [
+      {"name": "Baby Ray", "id": "EDU_001"}
+    ],
+    "links": [
+      {
+        "name": "Udemy",
+        "icon": "none",
+        "courseId": "",
+        "url": "https://www.udemy.com/"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Python",
+    "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
+    "details": {
+      "sections": [
+        {
+          "title": "Overview",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Ciriculum",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Educator",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Reviews",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        }
+      ]
+    },
+    "price": "Free",
+    "tags": [
+      "Programming"
+    ],
+    "reviews": {
+      "average": 5,
+      "list": []
+    },
+    "images": [
+      {
+        "type": "main",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      }
+    ],
+    "educators": [
+      {"name": "Baby Ray", "id": "EDU_001"}
+    ],
+    "links": [
+      {
+        "name": "Udemy",
+        "icon": "none",
+        "courseId": "",
+        "url": "https://www.udemy.com/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "C#",
+    "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
+    "details": {
+      "sections": [
+        {
+          "title": "Overview",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Ciriculum",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Educator",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Reviews",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        }
+      ]
+    },
+    "price": "Free",
+    "tags": [
+      "Game Development"
+    ],
+    "reviews": {
+      "average": 5,
+      "list": []
+    },
+    "images": [
+      {
+        "type": "main",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      }
+    ],
+    "educators": [
+      {"name": "Baby Ray", "id": "EDU_001"}
+    ],
+    "links": [
+      {
+        "name": "Udemy",
+        "icon": "none",
+        "courseId": "",
+        "url": "https://www.udemy.com/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Bash",
+    "description": "Velit ea culpa proident dolore ea magna do cillum aliquip nulla est esse laboris.",
+    "details": {
+      "sections": [
+        {
+          "title": "Overview",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Ciriculum",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Educator",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        },
+        {
+          "title": "Reviews",
+          "html": "<h3 class=\"title\">About This Course</h3><p>The goal of this course is to take you, you beautiful front end developer you, from someone with very little or no jQuery or JavaScript knowledge and up you to someone who is quite comfortable working with and writing jQuery and JavaScript.</p><p>There are other courses out there, this one is mine. We’ll make mistakes along the way. We’ll fix them. We’ll talk about theory. We’ll build practical, real things.</p><p>jQuery is monstrous in its popularity and ubiquity on the web. It doesn’t doeverything, but what it does it does very well and that makes it part of nearly every major websites toolkit.</p><p>It is great at all the “DOM” stuff – selecting and manipulating elements on the page. It’s great at handling events. It has a nice API for all kinds of stuff – the “chaining” idea is very nice. It helps tremendously with Ajax. It helps with animation. The world of plugins around it is vast. While doing all this, perhaps the most compelling feature is that it handles the cross-browser problems for you.</p> <p>We’ll talk about all that in more in this course.</p> <div class=\"bottom-content\"><div class=\"row align-items-center\"><div class=\"col-lg-6 col-md-6 col-12\"><div class=\"button\"><a href=\"#0\" class=\"btn\">Buy this course</a></div></div><div class=\"col-lg-6 col-md-6 col-12\"><ul class=\"share\"><li><span>Share this course:</span></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-facebook-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-twitter-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-linkedin-original\"></i></a></li><li><a href=\"javascript:void(0)\"><i class=\"lni lni-google\"></i></a></li></ul></div></div></div></div>"
+        }
+      ]
+    },
+    "price": "Free",
+    "tags": [
+      "Programming"
+    ],
+    "reviews": {
+      "average": 5,
+      "list": []
+    },
+    "images": [
+      {
+        "type": "main",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      },
+      {
+        "type": "list",
+        "src": "https://via.placeholder.com/550x340",
+        "alt": "Alt for this course image",
+        "caption": "Caption for this course image"
+      }
+    ],
+    "educators": [
+      {"name": "Baby Ray", "id": "EDU_001"}
+    ],
+    "links": [
+      {
+        "name": "Udemy",
+        "icon": "none",
+        "courseId": "",
+        "url": "https://www.udemy.com/"
+      }
+    ]
+  }
+]

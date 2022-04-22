@@ -1,0 +1,100 @@
+<tna-breadcrumb [pageTitle]="'Course Details'" [parent]="{name: 'Courses', link: '/courses'}" [pageDescription]="'A run-down on what this course covers, including length of time, price, pre-requisites, and educator information'" [currentLocation]="'Course Details'"></tna-breadcrumb>
+ <!-- Course Details Section Start -->
+ <div class="course-details section">
+  <div class="container">
+      <div class="row">
+          <!-- Course Details Wrapper Start -->
+          <div class="col-lg-8 col-12">
+            <!-- TODO: Add Static Course Overview -->
+            <!-- TODO: Add sticky tab navigation for ciriculum, educator info, and reviews -->
+
+            <div class="course-visuals">
+              <div class="course-overview-video">
+                  <iframe title="Team Noxious Academy | Welcome To The Other Side (Channel Trailer)"
+                      src="https://www.youtube.com/embed/NEBfOH0GPu0?feature=oembed"></iframe>
+              </div>
+            </div>
+            <tabset customClass="nav nav-tabs">
+              <tab *ngFor="let tabz of course?.details.sections; let i = index;">
+                <ng-template tabHeading>
+                  <button class="nav-link" [ngClass]="selectedSectionTab === i ? 'active': ''" type="button" role="tab" aria-controls="overview"
+                            aria-selected="false" (click)="selectSectionTab(i)">{{tabz.title}}</button>
+                </ng-template>
+                <div [innerHtml]="tabz.html"></div>
+              </tab>
+            </tabset>
+          </div>
+          <!-- End Course Details Wrapper -->
+          <!-- Start Course Sidebar -->
+          <div class="col-lg-4 col-12">
+              <div class="course-sidebar">
+                  <div class="sidebar-widget">
+                      <h3 class="sidebar-widget-title">Search</h3>
+                      <div class="sidebar-widget-content">
+                          <div class="sidebar-widget-search">
+                              <form action="#">
+                                  <input type="text" placeholder="Search...">
+                                  <button><i class="lni lni-search-alt"></i></button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="sidebar-widget other-course-wedget">
+                      <h3 class="sidebar-widget-title">Recent Courses</h3>
+                      <div class="sidebar-widget-content">
+                          <ul class="sidebar-widget-course">
+                              <li class="single-course">
+                                  <div class="thumbnail">
+                                      <a href="javascript:void(0)" class="image"><img
+                                              src="https://via.placeholder.com/170x170" alt="Course Image"></a>
+                                  </div>
+                                  <div class="info">
+                                      <span class="price">$40<span>.00</span></span>
+                                      <h6 class="title"><a href="course-details.html">Learning to
+                                              Write as a Professional Author</a></h6>
+                                  </div>
+                              </li>
+                              <li class="single-course">
+                                  <div class="thumbnail">
+                                      <a href="javascript:void(0)" class="image"><img
+                                          src="https://via.placeholder.com/170x170" alt="Course Image"></a>
+                                  </div>
+                                  <div class="info">
+                                      <span class="price">Free</span>
+                                      <h6 class="title"><a
+                                              href="course-details.html">Customer-centric
+                                              Info-Tech Strategies</a></h6>
+                                  </div>
+                              </li>
+                              <li class="single-course">
+                                  <div class="thumbnail">
+                                      <a href="javascript:void(0)" class="image"><img
+                                          src="https://via.placeholder.com/170x170" alt="Course Image"></a>
+                                  </div>
+                                  <div class="info">
+                                      <span class="price">$19<span>.00</span></span>
+                                      <h6 class="title"><a href="course-details.html">Open
+                                              Programming Courses for Everyone: Python</a></h6>
+                                  </div>
+                              </li>
+                              <li class="single-course">
+                                  <div class="thumbnail">
+                                      <a href="javascript:void(0)" class="image"><img
+                                          src="https://via.placeholder.com/170x170" alt="Course Image"></a>
+                                  </div>
+                                  <div class="info">
+                                      <span class="price">$26<span>.00</span></span>
+                                      <h6 class="title"><a href="course-details.html">Academic
+                                              Listening and Note-taking</a></h6>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- End Course Sidebar -->
+      </div>
+  </div>
+</div>
+<!-- Course Details Section End -->

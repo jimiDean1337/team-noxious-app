@@ -18,12 +18,8 @@ import { animate, stagger, style } from '@angular/animations';
 export class ProfileComponent implements OnInit {
   public defaults?: any = {};
 
-  public currentUser: User | undefined = {};
-  public updateModel: User = {
-    interests: [],
-    tools: [],
-    frameworks: []
-  };
+  public currentUser$: Observable<User | undefined> = new Observable();
+  public updateModel: User = {};
 
   public alert: any = {
     show: false,
@@ -49,7 +45,7 @@ export class ProfileComponent implements OnInit {
   public codingGridContent = {
     title: 'Preferences',
     subtitle: 'Languages, Tools, & More',
-    description: 'Choose up to 5 languages, tools, or frameworks to help Team Noxious better understand your interests.'
+    description: 'Choose up to 3 interests to help Team Noxious better understand your interests.'
   }
 
   constructor(private cookie: CookieService, private userService: UserService, private dataService: DataService, private route: ActivatedRoute, private modal: BsModalService) { }
@@ -61,7 +57,8 @@ export class ProfileComponent implements OnInit {
   public update(uid: any, data: User) {
     this.userService.update(uid, data)
     .then(results => {
-      console.log('User Profile Updated', results)
+      console.log('User Profile Updated', {data, results})
+      this.updateModel = {};
       this.alert.show = true;
       this.alert.useTemplate = true;
       this.alert.content.title = `Oh yeah!`;
@@ -89,14 +86,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
 
     const uid = this.cookie.get('USER_ID')
-    this.userService.getUserById(uid).valueChanges({idField: true})
+    this.currentUser$ = this.userService.getUserById(uid).valueChanges({idField: true})
     .pipe(
-      first(user => !!user)
+      tap(user => console.log('User', user))
     )
-    .subscribe(user => {
-      console.log(user)
-      this.currentUser = user;
-    })
     this.dataService.getDBList('interests')
     .valueChanges()
     .subscribe(data => this.defaults.interests = data)

@@ -12,32 +12,32 @@ export class DataService {
   constructor(private afs: AngularFirestore, private db: AngularFireDatabase) { }
 
   // Firebase Firestore
-  public getCollection(name: string, queryFn?: QueryFn) {
-    return this.afs.collection(name, queryFn ? queryFn:undefined);
+  public getCollection<T = any>(name: string, queryFn?: QueryFn) {
+    return this.afs.collection<T>(name, queryFn ? queryFn:undefined);
   }
 
-  public getCollectionStream(name: string, withIdField = false) {
-    return this.getCollection(name).valueChanges({idField: withIdField});
+  public getCollectionStream<T = any>(name: string, withIdField = false) {
+    return this.getCollection<T>(name).valueChanges({idField: withIdField});
   }
 
   public getDocument<T = any>(collectionName: string, docId: string) {
     return this.afs.collection<T>(collectionName).doc(docId);
   }
 
-  public getDocumentStream(collectionName: string, docId: string, withIdField = false) {
-    return this.getDocument(collectionName, docId).valueChanges({idField: withIdField});
+  public getDocumentStream<T = any>(collectionName: string, docId: string, withIdField = false) {
+    return this.getDocument<T>(collectionName, docId).valueChanges({idField: withIdField});
   }
 
-  public addToCollection(name: string, data: any) {
-    return this.getCollection(name).add(data);
+  public addToCollection<T = any>(name: string, data: any) {
+    return this.getCollection<T>(name).add(data);
   }
 
-  public updateDocument(collectionName: string, docId: string, data: any) {
-    return this.afs.collection(collectionName).doc(docId).update(data);
+  public updateDocument<T = any>(collectionName: string, docId: string, data: any) {
+    return this.afs.collection<T>(collectionName).doc(docId).update(data);
   }
 
-  public deleteDocument(collectionName: string, docId: string) {
-    return this.getDocument(collectionName, docId).delete();
+  public deleteDocument<T = any>(collectionName: string, docId: string) {
+    return this.getDocument<T>(collectionName, docId).delete();
   }
 
   // Firebase RealTimeDatabase

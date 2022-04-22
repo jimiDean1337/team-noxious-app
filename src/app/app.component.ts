@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import * as AOS from 'aos';
 import { filter, Observable, tap } from 'rxjs';
 import { AuthService } from './core/services/auth.service';
+import { NotificationsService } from './core/services/notifications.service';
 @Component({
   selector: 'tna-root',
   templateUrl: './app.component.html',
@@ -14,8 +15,9 @@ export class AppComponent implements OnInit {
   showMobileMenu = false;
   navStart: any;
   isLoggedIn: any;
+  showToTopBtn: boolean = true;
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private notifications: NotificationsService) {
     this.navStart = router.events.pipe(
       filter(evt => evt instanceof NavigationStart)
     ) as Observable<NavigationStart>;
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
   public signOut() {
     return this.authService.signOut()
     .then((result: any) => {
+      this.notifications.success('You are now signed out!', 'Success')
       this.router.navigateByUrl('/login')
     })
   }
@@ -75,7 +78,8 @@ export class AppComponent implements OnInit {
       }
 
       const backToTop: any = document.querySelector('.scroll-top');
-      if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      const currentLocation = location.href;
+      if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 && !currentLocation.includes('registration') && !currentLocation.includes('login')) {
         backToTop.style.display = 'flex';
       } else {
         backToTop.style.display = "none";

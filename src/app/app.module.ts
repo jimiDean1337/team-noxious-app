@@ -32,6 +32,9 @@ import { FaqModule } from './views/faq/faq.module';
 import { PageNotFoundModule } from './views/page-not-found/page-not-found.module';
 import { UserModule } from './views/user/user.module';
 import { CookieService } from 'ngx-cookie-service';
+import { PasswordResetModule } from './views/password-reset/password-reset.module';
+import { VerifyEmailModule } from './views/verify-email/verify-email.module';
+import { ToastrModule } from 'ngx-toastr';
 // import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
@@ -40,6 +43,11 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      progressBar: true,
+      enableHtml: true,
+      closeButton: true
+    }),
     AccordionModule.forRoot(),
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),
@@ -69,6 +77,8 @@ import { CookieService } from 'ngx-cookie-service';
     FaqModule,
     PageNotFoundModule,
     AppRoutingModule,
+    PasswordResetModule,
+    VerifyEmailModule,
   ],
   providers: [
     CookieService,

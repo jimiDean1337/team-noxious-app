@@ -17,10 +17,12 @@ import { RouterModule } from '@angular/router';
 import { TeacherProfileCardComponent } from './components/teacher-profile-card/teacher-profile-card.component';
 import { CourseCardComponent } from './components/course-card/course-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { AvatarCustomizerComponent } from './components/avatar-customizer/avatar-customizer.component';
 import { TagInputModule } from 'ngx-chips';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { CodingLanguagesGridComponent } from './components/coding-languages-grid/coding-languages-grid.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -35,6 +37,8 @@ import { CodingLanguagesGridComponent } from './components/coding-languages-grid
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxMasonryModule
   ],
   exports: [
@@ -42,6 +46,8 @@ import { CodingLanguagesGridComponent } from './components/coding-languages-grid
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    ToastrModule,
+    NgxCaptchaModule,
     NgxMasonryModule,
     AccordionModule,
     BsDropdownModule,

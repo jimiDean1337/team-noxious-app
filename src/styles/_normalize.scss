@@ -1054,7 +1054,7 @@ ol {
     height: 45px;
     line-height: 45px;
     background: $theme-color;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 13px;
@@ -1063,7 +1063,7 @@ ol {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 9;
+    z-index: 900;
     cursor: pointer;
     transition: all .3s ease-out 0s;
     border-radius: 0;
