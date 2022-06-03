@@ -1,5 +1,5 @@
 <!-- Start Breadcrumbs -->
-<tna-breadcrumb [pageTitle]="'Courses'" [currentLocation]="'Courses'" [pageDescription]="'This is some standard dummy text'"></tna-breadcrumb>
+<tna-breadcrumb [imgSrc]="heroBackgroundImgSrc" [pageTitle]="'Courses'" [currentLocation]="'Courses'" [pageDescription]="'This is some standard dummy text'"></tna-breadcrumb>
 <!-- End Breadcrumbs -->
 
 <!-- Start Events Area-->
@@ -20,11 +20,14 @@
                   </div>
                   <div class="bottom-content">
                       <ul class="review">
-                          <li *ngFor="let star for 5"><i class="lni lni-star-filled"></i></li>
-                          <!-- <li><i class="lni lni-star-filled"></i></li>
-                          <li><i class="lni lni-star-filled"></i></li>
-                          <li><i class="lni lni-star-filled"></i></li>
-                          <li><i class="lni lni-star-filled"></i></li> -->
+                          <li>
+                            <rating [readonly]="true" [max]="5" [customTemplate]="t" [(ngModel)]="course.reviews.average"></rating>
+                            <ng-template #t let-index="index" let-value="value">
+                              <i class="lni lni-{{index < value ? 'star-filled':'star-empty'}}"></i>
+                            </ng-template>
+
+                          </li>
+
                           <li>22 Reviews</li>
                       </ul>
                       <span class="tag" *ngFor="let tag of course.tags; let i = index;" [hidden]="i > 0">

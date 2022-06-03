@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/core/services/data.service';
-import { Course } from 'src/app/shared/interfaces/course';
+import { ICourse } from 'src/app/shared/interfaces/course';
 
 @Component({
   selector: 'tna-course-details',
@@ -9,11 +9,12 @@ import { Course } from 'src/app/shared/interfaces/course';
   styleUrls: ['./course-details.component.scss']
 })
 export class CourseDetailsComponent implements OnInit {
-  public course: Course | any;
-  selectedSectionTab: number = 0;
+  public course: ICourse | any;
+  public selectedSectionTab: number = 0;
   constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService) { }
 
   public selectSectionTab(id: number) {
+
     console.log(id)
     this.selectedSectionTab = id;
   }
@@ -29,7 +30,7 @@ export class CourseDetailsComponent implements OnInit {
       //     this.course = course;
       //   }
       // })
-      this.course = courses.filter((course: Course | any): any => {
+      this.course = courses.filter((course: ICourse | any): any => {
         console.log(course)
            if (`${course.id}` === courseId) {
           return course;

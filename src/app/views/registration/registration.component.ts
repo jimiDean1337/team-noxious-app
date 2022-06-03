@@ -4,9 +4,9 @@ import { UserCredential } from 'firebase/auth';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { UserService } from 'src/app/core/services/user.service';
-// import { ReCaptchaV3Service } from 'ngx-captcha';
+import { ReCaptchaV3Service } from 'ngx-captcha';
 import { NotificationsService } from 'src/app/core/services/notifications.service';
-import { catchError } from 'rxjs';
+// import { catchError } from 'rxjs';
 
 @Component({
   selector: 'tna-registration',
@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
     private route: ActivatedRoute,
     private cookie: CookieService,
     private notifications: NotificationsService,
-    // private reCaptcha: ReCaptchaV3Service,
+    private reCaptcha: ReCaptchaV3Service,
     ) { }
 
   public async registerWithGoogle() {
@@ -40,9 +40,13 @@ export class RegistrationComponent implements OnInit {
     /* TODO: Finish Recaptcha3 Setup
     let response: any;
     */
+   const capKey = '6LfNCD4fAAAAADp_z-m3opajJw-NzFJXXGx2o5Ta';
     const {firstname, lastname, email, username, pass} = input;
     try {
       const results = await this.auth.register(email, pass);
+      this.reCaptcha.execute(capKey, 'registration', token => {
+        console.log('Recapthcah token: ', token);
+      })
       await this.userService.createUserFromEmail(firstname, lastname, email, username, results.user?.uid)
       return await this.registrationSuccess(results);
     } catch(err) {

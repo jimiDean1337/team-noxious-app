@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 import { UserService } from 'src/app/core/services/user.service';
-import { User } from 'src/app/shared/interfaces/user';
+import { IUser } from 'src/app/shared/interfaces/user';
 
 @Component({
   selector: 'tna-dashboard',
@@ -11,7 +11,7 @@ import { User } from 'src/app/shared/interfaces/user';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public currentUser: User = {}
+  public currentUser: IUser = {}
 
   constructor(private router: Router, private cookie: CookieService, private userService: UserService) {
     this.currentUser = new Observable();
@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     const uid = this.cookie.get('USER_ID');
     this.userService.getUserById(uid).valueChanges({idField: true})
-    .subscribe((user: User | any) => this.currentUser = user);
+    .subscribe((user: IUser | any) => this.currentUser = user);
   }
 
 }

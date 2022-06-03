@@ -1,17 +1,17 @@
-export interface Verification {
+export interface IVerification {
   [key: string]: any;
-  email?: EmailVerification;
-  recaptcha?: RecaptchaVerification;
+  email?: IEmailVerification;
+  recaptcha?: IRecaptchaVerification;
 }
 
-interface EmailVerification {
+interface IEmailVerification {
   [key: string]: any;
   email?: string;
   isVerified?: boolean;
   verificationDate?: any;
 }
 
-interface RecaptchaVerification {
+interface IRecaptchaVerification {
   [key: string]: any;
   token?: string;
   secret?: string;

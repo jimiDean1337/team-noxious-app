@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-
+import {AngularFireAnalytics} from '@angular/fire/compat/analytics';
 @Injectable({
   providedIn: 'root'
 })
 export class AnalyticsService {
 
-  constructor() { }
+  constructor(private analytics: AngularFireAnalytics) { }
 }

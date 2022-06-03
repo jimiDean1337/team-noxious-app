@@ -1,6 +1,6 @@
-import { Verification } from "./verification";
+import { IVerification } from "./verification";
 
-export interface User {
+export interface IUser {
   [prop: string]: any;
   idField?: string;
   firstname?: string;
@@ -16,10 +16,10 @@ export interface User {
   courses?: any;
   roles?: string[];
   providerId?: string;
-  verification?: Verification;
+  verification?: IVerification;
 }
 
-export interface UserAvatar {
+export interface IUserAvatar {
   src?: string;
   isUrl?: boolean;
 }

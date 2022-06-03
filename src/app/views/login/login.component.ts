@@ -13,9 +13,7 @@ import { NotificationsService } from 'src/app/core/services/notifications.servic
 })
 export class LoginComponent implements OnInit {
   formModel?: any = {};
-  aFormGroup: FormGroup = this.formBuilder.group({
-    recaptcha: ['', Validators.required]
-  });
+
   recaptchaConfig: any = {
     type: 'image',
     badge: '',
@@ -47,9 +45,14 @@ export class LoginComponent implements OnInit {
 
 
   loginWithEmail(email: string, pass: string) {
-    this.auth.email(email, pass)
-    .then(results => {
-      this.success(results);
+    const capKey = '6LfNCD4fAAAAADp_z-m3opajJw-NzFJXXGx2o5Ta'
+    this.reCaptcha.executeAsPromise(capKey, 'login')
+    .then(res => {
+      this.auth.email(email, pass)
+      .then(results => {
+        this.success(results);
+      })
+      .catch(err => this.handleError(err))
     })
     .catch(err => this.handleError(err))
   }

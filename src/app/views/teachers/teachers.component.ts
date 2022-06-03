@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Teacher } from 'src/app/shared/interfaces/teacher';
+import { ITeacher } from 'src/app/shared/interfaces/teacher';
 
 @Component({
   selector: 'tna-teachers',
@@ -7,7 +7,8 @@ import { Teacher } from 'src/app/shared/interfaces/teacher';
   styleUrls: ['./teachers.component.scss']
 })
 export class TeachersComponent implements OnInit {
-  teachers: Teacher[] = [
+  heroBackgroundImgSrc: string = 'assets/images/hero/tna-teachers.jpg';
+  teachers: ITeacher[] = [
     {
       name: 'Mr. Reacher',
       id: '087YGF65R',

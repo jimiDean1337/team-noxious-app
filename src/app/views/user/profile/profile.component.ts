@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, tap } from 'rxjs';
 import { UserService } from 'src/app/core/services/user.service';
-import { User } from 'src/app/shared/interfaces/user';
+import { IUser } from 'src/app/shared/interfaces/user';
 import { BsModalService, BsModalRef, ModalOptions } from 'ngx-bootstrap/modal';
 import {first} from 'rxjs/operators';
 import { DataService } from 'src/app/core/services/data.service';
@@ -18,8 +18,8 @@ import { animate, stagger, style } from '@angular/animations';
 export class ProfileComponent implements OnInit {
   public defaults?: any = {};
 
-  public currentUser$: Observable<User | undefined> = new Observable();
-  public updateModel: User = {};
+  public currentUser$: Observable<IUser | undefined> = new Observable();
+  public updateModel: IUser = {};
 
   public alert: any = {
     show: false,
@@ -54,7 +54,7 @@ export class ProfileComponent implements OnInit {
     console.log(event)
   }
 
-  public update(uid: any, data: User) {
+  public update(uid: any, data: IUser) {
     this.userService.update(uid, data)
     .then(results => {
       console.log('User Profile Updated', {data, results})

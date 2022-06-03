@@ -1,0 +1,7 @@
+TODO: Mock Data @critical
+  ☐ generate some mock data to implement testing and build
+  ☐ use http client to GET mock data
+  ☐ analyze mock data results to refine final courses data architecture
+
+TODO: Courses Service @critical
+  ☐ use firebase rtdb to store a retrieve educator generated

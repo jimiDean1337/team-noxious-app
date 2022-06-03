@@ -11,6 +11,7 @@ export class BreadcrumbComponent implements OnInit {
   @Input() pageDescription: string = '';
   @Input() parent?: any;
   @Input() currentLocation: string = 'Current Location';
+  @Input() imgSrc ='https://via.placeholder.com/1920x1280';
   constructor(private router: Router) { }
 
   navigateTo(url: string) {

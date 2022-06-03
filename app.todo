@@ -1,21 +1,34 @@
 TODO: Pages:
   ☐ Home
   ☐ About
+    TODO: TNA Content
+      ☐ work with Exec Secretary to generate tna seo driven content (text only)
+      ☐ search for appropriate images, using stock photos if needed
+
   ☐ Courses
-    TODO: Course List
-      ☐ JavaScript
-      ☐ Python
-      ☐
+    TODO: Course List @critical
+      ☐ create a course list
+      ☐ add course list to database as json
   ☐ Teachers
+    TODO: Teachers List @critical
+      ☐ create a teachers list
+      ☐ add teachers list to databse as json
   ☐ Contact
   ☐ Donate
+    TODO: Payment Platform
+      ☐ decide on either PayPal, Square, or Stripe
+      ☐ create basic one time donation payment service
+      ☐ create advanced monthly donation payment service
   ☐ FAQ
+    TODO: Frequesntly Asked Questions
+      ☐ create list of faq's
+      ☐ add faq list to database as json
   ☐ User
-    TODO: Create USER data properties:
-      ☐ Dashboard
-      ☐ Profile
-      ☐ Account
-      ☐ Courses
+    TODO: Create USER data properties: @critical
+      ☐ Dashboard (chore: finish)
+      ☐ Profile (chore: finish)
+      ☐ Account (chore: finish)
+      ☐ Courses (chore: finish)
 
 TODO: Features:
   ☐ Avatar uploader and customizer

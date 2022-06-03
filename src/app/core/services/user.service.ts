@@ -3,15 +3,15 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { map, Observable, switchMap } from 'rxjs';
 import * as moment from 'moment';
 import { DataService } from './data.service';
-import { User } from 'src/app/shared/interfaces/user';
+import { IUser } from 'src/app/shared/interfaces/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private Users?: AngularFirestoreCollection<any>;
-  private user?: AngularFirestoreDocument<User>;
-  private userDefaults: User = {
+  private user?: AngularFirestoreDocument<IUser>;
+  private userDefaults: IUser = {
     linkedAccounts: [],
     joinedOn: new Date(),
     interests: [
@@ -31,18 +31,18 @@ export class UserService {
   }
 
   private get users() {
-    return this.Users = this.dataService.getCollection<User>('users');
+    return this.Users = this.dataService.getCollection<IUser>('users');
   }
 
   public checkForUserById(userId: string) {
     return this.users.valueChanges({ idField: true })
     .pipe(map(users => {
-      return users.filter((user: User) => user.idField === userId).length > 0;
+      return users.filter((user: IUser) => user.idField === userId).length > 0;
     }))
   }
 
   public checkForUserByEmail(email: string) {
-    return this.dataService.getCollection<User>('users')
+    return this.dataService.getCollection<IUser>('users')
     .valueChanges()
       .pipe(
         map(users => users.filter(user => user.email === email)),
@@ -91,7 +91,7 @@ export class UserService {
 
   }
 
-  public update(uid: string, data: User) {
+  public update(uid: string, data: IUser) {
     return this.getUserById(uid).update({...data});
   }
 
@@ -99,7 +99,7 @@ export class UserService {
     return this.getUserById(uid).delete();
   }
 
-  public getUserById(userId: string): AngularFirestoreDocument<User> {
+  public getUserById(userId: string): AngularFirestoreDocument<IUser> {
     return this.user = this.users.doc(userId);
   }
 

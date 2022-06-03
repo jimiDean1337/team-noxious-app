@@ -20,7 +20,7 @@
                   <button class="nav-link" [ngClass]="selectedSectionTab === i ? 'active': ''" type="button" role="tab" aria-controls="overview"
                             aria-selected="false" (click)="selectSectionTab(i)">{{tabz.title}}</button>
                 </ng-template>
-                <div [innerHtml]="tabz.html"></div>
+                <div [innerHtml]="tabz.html | safeHtml"></div>
               </tab>
             </tabset>
           </div>

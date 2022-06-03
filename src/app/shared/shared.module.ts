@@ -23,6 +23,7 @@ import { TagInputModule } from 'ngx-chips';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { CodingLanguagesGridComponent } from './components/coding-languages-grid/coding-languages-grid.component';
 import { ToastrModule } from 'ngx-toastr';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 
 
@@ -33,6 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     CourseCardComponent,
     AvatarCustomizerComponent,
     CodingLanguagesGridComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     CommonModule,
@@ -67,6 +69,7 @@ import { ToastrModule } from 'ngx-toastr';
     CourseCardComponent,
     AvatarCustomizerComponent,
     CodingLanguagesGridComponent,
+    SafeHtmlPipe,
   ]
 })
 export class SharedModule { }

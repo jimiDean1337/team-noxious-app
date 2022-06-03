@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Teacher } from '../../interfaces/teacher';
+import { ITeacher } from '../../interfaces/teacher';
 
 @Component({
   selector: 'tna-teacher-profile-card',
@@ -7,7 +7,7 @@ import { Teacher } from '../../interfaces/teacher';
   styleUrls: ['./teacher-profile-card.component.scss']
 })
 export class TeacherProfileCardComponent implements OnInit {
-  @Input() teacher?: Teacher;
+  @Input() teacher?: ITeacher;
   @Input() size: string = 'col-lg-6 col-md-6 col-12';
   constructor() { }
 

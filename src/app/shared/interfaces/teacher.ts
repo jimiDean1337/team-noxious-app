@@ -1,14 +1,14 @@
-export interface Teacher {
+export interface ITeacher {
   [name: string]: any;
   name?: string;
   role?: string[];
   tags?: any[];
   imgSrc?: string;
   id?: string;
-  socialLinks?: SocialLink[];
+  socialLinks?: ISocialLink[];
 }
 
-interface SocialLink {
+interface ISocialLink {
   icon?: string;
   url?: string;
   name?: string;

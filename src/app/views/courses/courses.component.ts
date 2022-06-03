@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
-import { Course } from 'src/app/shared/interfaces/course';
+import { ICourse } from 'src/app/shared/interfaces/course';
 
 @Component({
   selector: 'tna-courses',
@@ -10,13 +10,14 @@ import { Course } from 'src/app/shared/interfaces/course';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  private Courses?: Observable<Course[]> | any;
-  public coursesList?: Course[] | any;
-  public selectedCourse?: Course;
+  private Courses?: Observable<ICourse[]> | any;
+  public coursesList?: ICourse[] | any;
+  public selectedCourse?: ICourse;
+  heroBackgroundImgSrc: string = 'assets/images/hero/tna-courses.jpg';
 
   constructor(private router: Router, private route: ActivatedRoute, private dataService: DataService) { }
 
-  private get courses(): Observable<Course[] | any> {
+  private get courses(): Observable<ICourse[] | any> {
     return this.Courses = this.dataService.getDBList('courses').valueChanges()
   }
 
