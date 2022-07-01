@@ -1,69 +1,4 @@
 {
-  "languages": [
-    {"icon":"devicon-javascript-plain" ,"name":"JavaScript"},
-    {"icon":"devicon-nodejs-plain" ,"name":"NodeJS"},
-    {"icon":"devicon-python-plain" ,"name":"Python"},
-    {"icon":"devicon-bash-plain" ,"name":"Bash"},
-    {"icon":"devicon-cplusplus-plain" ,"name":"C++"},
-    {"icon":"devicon-csharp-plain" ,"name":"C#"},
-    {"icon":"devicon-html5-plain" ,"name":"HTML"},
-    {"icon":"devicon-css3-plain" ,"name":"CSS"},
-    {"icon":"devicon-ruby-plain" ,"name":"Ruby"},
-    {"icon":"devicon-mysql-plain" ,"name":"MySQL"},
-    {"icon":"devicon-sqlite-plain" ,"name":"SQLite"},
-    {"icon":"devicon-php-plain" ,"name":"PHP"},
-    {"icon":"devicon-java-plain" ,"name":"Java"},
-    {"icon":"devicon-sass-plain" ,"name":"Sass"},
-    {"icon":"devicon-less-plain-wordmark" ,"name":"Less"},
-    {"icon":"devicon-typescript-plain" ,"name":"TypeScript"},
-    {"icon":"devicon-perl-plain" ,"name":"Perl"},
-    {"icon":"devicon-go-plain" ,"name":"Go"},
-    {"icon":"devicon-r-plain" ,"name":"R"},
-    {"icon":"devicon-rust-plain" ,"name":"Rust"},
-    {"icon":"devicon-spring-plain" ,"name":"Spring"}
-  ],
-  "tools": [
-    {"icon":"devicon-amazonwebservices-original" ,"name":"AWS"},
-    {"icon":"devicon-firebase-plain" ,"name":"Firebase"},
-    {"icon":"devicon-git-plain" ,"name":"GIT"},
-    {"icon":"devicon-github-original" ,"name":"GitHub"},
-    {"icon":"devicon-graphql-plain" ,"name":"GraphQL"},
-    {"icon":"devicon-jenkins-plain" ,"name":"Jenkins"},
-    {"icon":"devicon-kubernetes-plain" ,"name":"Kubernetes"},
-    {"icon":"devicon-linux-plain" ,"name":"Linux"},
-    {"icon":"devicon-nginx-plain" ,"name":"Nginx"},
-    {"icon":"devicon-npm-original-wordmark" ,"name":"NPM"},
-    {"icon":"devicon-putty-plain" ,"name":"PuTTY"}
-  ],
-  "frameworks": [
-    {"icon":"devicon-unity-original" ,"name":"Unity"},
-    {"icon":"devicon-unrealengine-original" ,"name":"Unreal Engine"},
-    {"icon":"devicon-angularjs-plain" ,"name":"Angular"},
-    {"icon":"devicon-react-plain" ,"name":"React"},
-    {"icon":"devicon-vuejs-plain" ,"name":"Vue"},
-    {"icon":"devicon-bootstrap-plain" ,"name":"Bootstrap"}
-  ],
-  "interests": [
-    "Machine Learning",
-    "Cyber Security",
-    "PenTesting",
-    "Data Architecture",
-    "Data Engineering",
-    "Information Technology",
-    "Information Security",
-    "App Development",
-    "Game Development",
-    "Web Development",
-    "Software",
-    "Hardware",
-    "Computer Repair",
-    "Digital Design",
-    "Video Editing",
-    "Front-end Development",
-    "Back-end Development",
-    "Network Security",
-    "Artificial Intelligence"
-  ],
   "courses": [
     {
       "id": 0,
@@ -242,8 +177,49 @@
       ]
     }
   ],
-  "tags": [
-    "Programming",
+  "due-date": "July 14, 2022 00:00:00",
+  "experience": {
+    "containers": []
+  },
+  "features": [
+    {
+      "title": "TNA Forum",
+      "description": "Team Noxious Academy Forum is a member powered platform, that is supported by TNA staff, tech professionals.",
+      "href": "https://forum.teamnoxious.com",
+      "routerLink": "null",
+      "linkText": "Visit Forum"
+    },
+    {
+      "title": "TNA Courses",
+      "description": "Team Noxious Academy Courses are nearly all free, and created by qualified, expert educators.",
+      "href": "null",
+      "routerLink": "/courses",
+      "linkText": "Start Learning"
+    },
+    {
+      "title": "TNA VideoChat",
+      "description": "Team Noxious Academy fully featured video/voice chat allows our members to be fully immersed in learning.",
+      "href": "https://video.teamnoxious.com",
+      "routerLink": "null",
+      "linkText": "Visit VideoChat"
+    },
+    {
+      "title": "TNA Rankings",
+      "description": "Keep track and show off your accomplishments with custom TNA rank badges, privaleges and rewards.",
+      "href": "null",
+      "routerLink": "/rankings",
+      "linkText": "View Rankings"
+    }
+  ],
+  "frameworks": [
+    {"icon":"devicon-unity-original" ,"name":"Unity"},
+    {"icon":"devicon-unrealengine-original" ,"name":"Unreal Engine"},
+    {"icon":"devicon-angularjs-plain" ,"name":"Angular"},
+    {"icon":"devicon-react-plain" ,"name":"React"},
+    {"icon":"devicon-vuejs-plain" ,"name":"Vue"},
+    {"icon":"devicon-bootstrap-plain" ,"name":"Bootstrap"}
+  ],
+  "interests": [
     "Machine Learning",
     "Cyber Security",
     "PenTesting",
@@ -263,9 +239,30 @@
     "Back-end Development",
     "Network Security",
     "Artificial Intelligence"
-
   ],
-  "topics": [],
+  "languages": [
+    {"icon":"devicon-javascript-plain" ,"name":"JavaScript"},
+    {"icon":"devicon-nodejs-plain" ,"name":"NodeJS"},
+    {"icon":"devicon-python-plain" ,"name":"Python"},
+    {"icon":"devicon-bash-plain" ,"name":"Bash"},
+    {"icon":"devicon-cplusplus-plain" ,"name":"C++"},
+    {"icon":"devicon-csharp-plain" ,"name":"C#"},
+    {"icon":"devicon-html5-plain" ,"name":"HTML"},
+    {"icon":"devicon-css3-plain" ,"name":"CSS"},
+    {"icon":"devicon-ruby-plain" ,"name":"Ruby"},
+    {"icon":"devicon-mysql-plain" ,"name":"MySQL"},
+    {"icon":"devicon-sqlite-plain" ,"name":"SQLite"},
+    {"icon":"devicon-php-plain" ,"name":"PHP"},
+    {"icon":"devicon-java-plain" ,"name":"Java"},
+    {"icon":"devicon-sass-plain" ,"name":"Sass"},
+    {"icon":"devicon-less-plain-wordmark" ,"name":"Less"},
+    {"icon":"devicon-typescript-plain" ,"name":"TypeScript"},
+    {"icon":"devicon-perl-plain" ,"name":"Perl"},
+    {"icon":"devicon-go-plain" ,"name":"Go"},
+    {"icon":"devicon-r-plain" ,"name":"R"},
+    {"icon":"devicon-rust-plain" ,"name":"Rust"},
+    {"icon":"devicon-spring-plain" ,"name":"Spring"}
+  ],
   "logs": [
     {
       "type": "user",
@@ -297,5 +294,60 @@
         }
       ]
     }
-  ]
+  ],
+  "tags": [
+    "Programming",
+    "Machine Learning",
+    "Cyber Security",
+    "PenTesting",
+    "Data Architecture",
+    "Data Engineering",
+    "Information Technology",
+    "Information Security",
+    "App Development",
+    "Game Development",
+    "Web Development",
+    "Software",
+    "Hardware",
+    "Computer Repair",
+    "Digital Design",
+    "Video Editing",
+    "Front-end Development",
+    "Back-end Development",
+    "Network Security",
+    "Artificial Intelligence"
+
+  ],
+  "tna-achievements": [
+    {
+      "title": "Happy Members",
+      "value": "2.5K+"
+    },
+    {
+      "title":"Online Courses",
+      "value": "70+"
+    },
+    {
+      "title":"Experienced Educators",
+      "value": "12"
+    },
+    {
+      "title":"Amazing Features",
+      "value": "6+"
+    }
+  ],
+  "tools": [
+    {"icon":"devicon-amazonwebservices-original" ,"name":"AWS"},
+    {"icon":"devicon-firebase-plain" ,"name":"Firebase"},
+    {"icon":"devicon-git-plain" ,"name":"GIT"},
+    {"icon":"devicon-github-original" ,"name":"GitHub"},
+    {"icon":"devicon-graphql-plain" ,"name":"GraphQL"},
+    {"icon":"devicon-jenkins-plain" ,"name":"Jenkins"},
+    {"icon":"devicon-kubernetes-plain" ,"name":"Kubernetes"},
+    {"icon":"devicon-linux-plain" ,"name":"Linux"},
+    {"icon":"devicon-nginx-plain" ,"name":"Nginx"},
+    {"icon":"devicon-npm-original-wordmark" ,"name":"NPM"},
+    {"icon":"devicon-putty-plain" ,"name":"PuTTY"}
+  ],
+  "topics": []
 }

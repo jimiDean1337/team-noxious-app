@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const uid = this.cookie.get('USER_ID');
+    const uid = this.cookie.get('_tna_USER_ID');
     this.userService.getUserById(uid).valueChanges({idField: true})
     .subscribe((user: IUser | any) => this.currentUser = user);
   }

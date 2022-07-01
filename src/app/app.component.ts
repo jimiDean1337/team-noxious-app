@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http';
 import * as AOS from 'aos';
 import { filter, Observable, tap } from 'rxjs';
 import { AuthService } from './core/services/auth.service';
 import { NotificationsService } from './core/services/notifications.service';
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'tna-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Team Noxious';
+  title = 'Team Noxious Academy';
   loading = false;
-  showMobileMenu = false;
+  showMobileMenu: boolean = false;
   navStart: any;
   isLoggedIn: any;
   showToTopBtn: boolean = true;
 
-  constructor(private authService: AuthService, private router: Router, private notifications: NotificationsService) {
+  constructor(private http: HttpClient, private authService: AuthService, private router: Router, private notifications: NotificationsService) {
     this.navStart = router.events.pipe(
       filter(evt => evt instanceof NavigationStart)
     ) as Observable<NavigationStart>;
@@ -55,16 +58,21 @@ export class AppComponent implements OnInit {
       duration: 800,
       once: true
     })
-    this.getAuthState().pipe(
-      tap(user => {console.log(user)})
+    // Get auth state if it exists
+    this.getAuthState()
+    .pipe(
+      tap(user => {
+        console.log(user)
+      })
     );
 
     this.navStart.subscribe(() => {
       this.loading = true;
+      this.showMobileMenu = false;
       this.scrollToTop()
       setTimeout(() => {
         this.loading = false;
-      }, 1200)
+      }, 3500)
     })
 
     window.onscroll = (ev: any) => {
@@ -97,11 +105,5 @@ export class AppComponent implements OnInit {
         })
       })
     })
-
-    const navbarToggler = document.querySelector('.mobile-menu-btn');
-    navbarToggler?.addEventListener('click', e => {
-      navbarToggler.classList.toggle('active');
-    })
-
   }
 }

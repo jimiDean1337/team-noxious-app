@@ -9,14 +9,16 @@
                     <canvas></canvas>
 
                       <div class="hero-text">
-                          <h5 class="" data-aos="fade-up">Start to learning today</h5>
-                          <h1 class="" data-aos="fade-up">We can help <span>you
-                                  unlock</span><br> Your full <span>potential.</span></h1>
-                          <p class="" data-aos="fade-up">Lorem Ipsum is simply dummy text of the
-                              printing and typesetting <br> industry. Lorem Ipsum has been the industry's standard
-                              <br>dummy text ever since.</p>
+                          <h5 class="" data-aos="fade-up">Start learning today</h5>
+                          <h1 class="" data-aos="fade-up">Helping you <span>
+                                  decode</span><br> your full <span>potential.</span></h1>
+                          <p class="col-md-6" data-aos="fade-up">Coding is a hot topic right now, but where do you even begin?
+                             You will be introduced to the world of coding and
+                             fundamental ideas through this path.
+                               By the end, you'll be able to decide if web development,
+                                game development, or software development is best for you.</p>
                           <div class="button style2 " data-aos="fade-up">
-                              <a href="javascript:void(0)" class="btn"><i class="lni lni-download"></i> Download
+                              <a href="assets%2Fgeneral%2Ftna-test-guide.txt" download="free_guide" class="btn"><i class="lni lni-download"></i> Download
                                   free guide</a>
                           </div>
                       </div>
@@ -34,55 +36,19 @@
   <div class="container-fluid">
       <div class="single-head">
           <div class="row">
-              <div class="col-lg-3 col-md-6 col-12 padding-zero">
+              <div *ngFor="let item of (Features$ | async)" class="col-lg-3 col-md-6 col-12 padding-zero">
                   <!-- Start Single Feature -->
                   <div class="single-feature">
-                      <h3><a href="javascript:void(0)">Feature One</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae
-                          nulla debitis vitae.</p>
-                      <div class="button">
-                          <a href="javascript:void(0)" class="btn">Start Here <i
-                                  class="lni lni-arrow-right"></i></a>
-                      </div>
-                  </div>
-                  <!-- End Single Feature -->
-              </div>
-              <div class="col-lg-3 col-md-6 col-12 padding-zero">
-                  <!-- Start Single Feature -->
-                  <div class="single-feature">
-                      <h3><a href="javascript:void(0)">Feature Two</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae
-                          nulla debitis vitae.</p>
-                      <div class="button">
-                          <a href="javascript:void(0)" class="btn">Start Here <i
-                                  class="lni lni-arrow-right"></i></a>
-                      </div>
-                  </div>
-                  <!-- End Single Feature -->
-              </div>
-              <div class="col-lg-3 col-md-6 col-12 padding-zero">
-                  <!-- Start Single Feature -->
-                  <div class="single-feature">
-                      <h3><a href="javascript:void(0)">Feature Three</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae
-                          nulla debitis vitae.</p>
-                      <div class="button">
-                          <a href="javascript:void(0)" class="btn">Start Here <i
-                                  class="lni lni-arrow-right"></i></a>
-                      </div>
-                  </div>
-                  <!-- End Single Feature -->
-              </div>
-              <div class="col-lg-3 col-md-6 col-12 padding-zero">
-                  <!-- Start Single Feature -->
-                  <div class="single-feature last">
-                      <h3><a href="javascript:void(0)">Feature Four</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae
-                          nulla debitis vitae.</p>
-                      <div class="button">
-                          <a href="javascript:void(0)" class="btn">Start Here <i
-                                  class="lni lni-arrow-right"></i></a>
-                      </div>
+                    <h3 *ngIf="item.href !== 'null'"><a [href]="item.href" target="_blank">{{item.title}}</a></h3>
+                    <h3 *ngIf="item.href === 'null'"><a [routerLink]="item.routerLink" target="_blank">{{item.title}}</a></h3>
+
+                    <p>{{item.description}}</p>
+                    <div class="button">
+                      <a *ngIf="item.href !== 'null'" [href]="item.href" target="_blank" class="btn">{{item.linkText}} <i
+                        class="lni lni-arrow-right"></i></a>
+                      <a *ngIf="item.href === 'null'" [routerLink]="item.routerLink" class="btn">{{item.linkText}} <i
+                        class="lni lni-arrow-right"></i></a>
+                    </div>
                   </div>
                   <!-- End Single Feature -->
               </div>
@@ -100,12 +66,9 @@
               <div class="left-content">
                   <div class="exp-title align-left">
                       <span class="fadeInDown" data-aos="fade-up">Some Facts About Us.</span>
-                      <h2 class="fadeInUp" data-aos="fade-up">We help individuals to become <br>their best
-                          version.</h2>
-                      <p class="fadeInUp" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur
-                          adipisicing elit, do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut
-                          enim ad min im veniam, quis nostrud exercitati ullamco laboris nisi ut aliquip ex ea
-                          commodo consequat.</p>
+                      <h2 class="fadeInUp" data-aos="fade-up">Team Noxious Academy <br>Equips you with the tools you need to succeed.</h2>
+                      <p class="fadeInUp" data-aos="fade-up">All of Team Noxious Academy staff, and educators are professionals in their field.
+                        Deserunt duis voluptate reprehenderit sunt quis aliqua. Culpa duis esse sint occaecat mollit proident anim veniam deserunt reprehenderit qui.</p>
                       <div class="button fadeInUp" data-aos="fade-up">
                           <a routerLink="/about" class="btn">Read More</a>
                       </div>
@@ -115,7 +78,7 @@
           <div class="col-lg-4 col-12">
               <div class="image fadeInRight" data-aos="fade-up">
                   <img src="https://via.placeholder.com/540x570" alt="#">
-                  <h2>20+ <span class="year">years</span> <span class="work">Work Experience</span></h2>
+                  <h2>50+ <span class="year">years</span> <span class="work">Combined Experience</span></h2>
               </div>
           </div>
       </div>
@@ -123,8 +86,13 @@
       <div class="cta-mini">
           <div class="row">
               <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                  <p>Become part of a dedicated community, run by. Earn a certification for
-                      your effort and passion <a href="javascript:void(0)">Get Free Guide </a> </p>
+                  <p>Join now to become part of an amazing community, built and run by its members.</p>
+              </div>
+              <div class="col-lg-4 offset-lg-4 col-md-12 col-12">
+                <p>
+                  <a href="assets%2Fgeneral%2Ftna-test-guide.txt" download="free_guide" class="btn"><i class="lni lni-download"></i> Download the
+                    free guide</a>
+                </p>
               </div>
           </div>
       </div>
@@ -137,28 +105,10 @@
 <section class="our-achievement section overlay">
   <div class="container">
       <div class="row">
-          <div class="col-lg-3 col-md-3 col-12">
+          <div *ngFor="let item of (Achievements$ | async)" class="col-lg-3 col-md-3 col-12">
               <div class="single-achievement fadeInUp" data-aos="fade-up">
-                  <h3 class="counter"><span id="secondo1" class="countup" cup-end="500">500</span>+</h3>
-                  <h4>Happy Clients</h4>
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-12">
-              <div class="single-achievement fadeInUp" data-aos="fade-up">
-                  <h3 class="counter"><span id="secondo2" class="countup" cup-end="70">70</span>+</h3>
-                  <h4>Online Courses</h4>
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-12">
-              <div class="single-achievement fadeInUp" data-aos="fade-up">
-                  <h3 class="counter"><span id="secondo3" class="countup" cup-end="100">100</span>%</h3>
-                  <h4>Satisfaction</h4>
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-12">
-              <div class="single-achievement fadeInUp" data-aos="fade-up">
-                  <h3 class="counter"><span id="secondo3" class="countup" cup-end="100">100%</span>%</h3>
-                  <h4>Support</h4>
+                  <h3 class="counter"><span id="secondo1" class="countup" cup-end="500"></span>{{item.value}}</h3>
+                  <h4>{{item.title}}</h4>
               </div>
           </div>
       </div>

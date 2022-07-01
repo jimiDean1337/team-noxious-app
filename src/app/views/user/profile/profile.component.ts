@@ -85,7 +85,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const uid = this.cookie.get('USER_ID')
+    const uid = this.cookie.get('_tna_USER_ID')
     this.currentUser$ = this.userService.getUserById(uid).valueChanges({idField: true})
     .pipe(
       tap(user => console.log('User', user))

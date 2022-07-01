@@ -71,10 +71,10 @@ export class AuthService {
   public async signOut() {
     try {
       await this.auth.signOut()
-      return this.cookie.delete('USER_ID');
+      this.cookie.delete('_tna_USER_ID');
     } catch(err) {
       console.log('Error on SignOut', err);
-      throw new Error('Could ot SignOut')
+      throw new Error('Could not SignOut')
     }
 
   }

@@ -59,15 +59,16 @@
                 ><img
                   src="assets/images/logo/logo.png"
                   alt="Logo"
-                  class="img-fluid"
+                  class=""
                 />
-                <h3>TEAM <b class="">NOX</b>IOUS ACADEMY</h3></span
+                <h3 class="d-none d-md-inline-block">TEAM <b class="">NOX</b>IOUS ACADEMY</h3>
+              </span
               >
             </a>
             <button
               class="navbar-toggler mobile-menu-btn"
               type="button"
-              (ngClick)="toggleMobileNav()"
+              (click)="toggleMobileNav()"
               [ngClass]="showMobileMenu ? 'active' : ''"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
@@ -78,8 +79,8 @@
               <span class="toggler-icon"></span>
             </button>
             <div
-              class="collapse navbar-collapse sub-menu-bar"
-              id="navbarSupportedContent"
+              class="collapse navbar-collapse sub-menu-bar animated fast"
+              id="navbarSupportedContent" [ngClass]="showMobileMenu ? 'show slideInRight': ''"
             >
               <ul id="nav" class="navbar-nav ms-auto">
                 <li class="nav-item">

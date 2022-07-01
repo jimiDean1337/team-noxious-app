@@ -34,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/animate.css/animate.compat.css",
               "node_modules/aos/dist/aos.css",
               "src/styles/styles.scss"
             ],

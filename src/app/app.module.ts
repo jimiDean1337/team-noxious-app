@@ -35,6 +35,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { PasswordResetModule } from './views/password-reset/password-reset.module';
 import { VerifyEmailModule } from './views/verify-email/verify-email.module';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 // import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ToastrModule.forRoot({
       progressBar: true,
       enableHtml: true,

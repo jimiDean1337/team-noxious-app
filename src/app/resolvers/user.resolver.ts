@@ -16,8 +16,8 @@ import { UserService } from '../core/services/user.service';
 export class UserResolver implements Resolve<boolean> {
   constructor(private userService: UserService, private cookie: CookieService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    if (this.cookie.check('USER_ID')) {
-      const uid = this.cookie.get('USER_ID')
+    if (this.cookie.check('_tna_USER_ID')) {
+      const uid = this.cookie.get('_tna_USER_ID')
       return this.userService.getUserById(uid).valueChanges()
     } else {
       return of(false);

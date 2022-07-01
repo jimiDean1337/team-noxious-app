@@ -19,17 +19,17 @@ export class LoginComponent implements OnInit {
     badge: '',
     theme: 'dark',
     recaptcha: '',
-    reset: function() {console.log('Cap Reset')},
-    ready: function() {console.log('Cap Reset')},
-    load: function() {console.log('Cap Reset')},
-    success: function(e: any) {console.log('Cap Reset', e)},
+    reset: function() {console.log('Capture Reset')},
+    ready: function() {console.log('Capture Reset')},
+    load: function() {console.log('Capture Reset')},
+    success: function(e: any) {console.log('Capture Reset', e)},
   }
 
   constructor(
     private auth: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder,
+    /* private formBuilder: FormBuilder, */
     private notifications: NotificationsService,
     private reCaptcha: ReCaptchaV3Service,
     private cookie: CookieService) { }
@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
 
   private success(results: any) {
     console.log('Login Success!', results)
-    this.cookie.set('USER_ID', results.user.uid, undefined, undefined, undefined, true, "Strict");
+    this.cookie.set('_tna_USER_ID', results.user.uid, undefined, undefined, undefined, true, "Strict");
     this.notifications.success('You are now Signed in!', 'Success')
     this.router.navigate([`/user`, results.user.uid, 'dashboard'], {relativeTo: this.route});
 

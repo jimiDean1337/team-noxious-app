@@ -66,7 +66,7 @@ export class RegistrationComponent implements OnInit {
 
   private registrationSuccess(results: any, type = 'email/pass') {
     console.log('Registration Success!', results, type)
-    this.cookie.set('USER_ID', results.user.uid, undefined, undefined, undefined, true, "Strict");
+    this.cookie.set('_tna_USER_ID', results.user.uid, undefined, undefined, undefined, true, "Strict");
     this.notifications.success('You are now registered!', 'Success')
     return this.router.navigate([`/user`, results.user.uid, 'dashboard'], {relativeTo: this.route})
   }
