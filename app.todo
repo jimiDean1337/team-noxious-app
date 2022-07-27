@@ -1,44 +1,63 @@
-TODO: Pages:
-  ☐ Home
-  ☐ About
-    TODO: TNA Content
+  TODO: Home: @critical
+    ☐ Finish dynamic content templating
+  TODO: About: @high
       ☐ work with Exec Secretary to generate tna seo driven content (text only)
       ☐ search for appropriate images, using stock photos if needed
 
-  ☐ Courses
-    TODO: Course List @critical
+  TODO: Courses: @high
       ☐ create a course list
       ☐ add course list to database as json
-  ☐ Teachers
-    TODO: Teachers List @critical
+
+  TODO: Teachers: @high
       ☐ create a teachers list
       ☐ add teachers list to databse as json
-  ☐ Contact
-  ☐ Donate
-    TODO: Payment Platform
-      ☐ decide on either PayPal, Square, or Stripe
-      ☐ create basic one time donation payment service
-      ☐ create advanced monthly donation payment service
-  ☐ FAQ
-    TODO: Frequesntly Asked Questions
-      ☐ create list of faq's
-      ☐ add faq list to database as json
-  ☐ User
-    TODO: Create USER data properties: @critical
-      ☐ Dashboard (chore: finish)
-      ☐ Profile (chore: finish)
-      ☐ Account (chore: finish)
-      ☐ Courses (chore: finish)
 
-TODO: Features:
-  ☐ Avatar uploader and customizer
-  ☐ Donations
-  ☐ Animated SVG Loader
-  ☐ Route Guards
-  ☐ Theme Changer (Light/Dark/Contrast)
+  TODO: Contact: @critical
+    ☐ Create Contact Autoresponse email template
+    ☐ Create contact autoresponse mailer module
 
-TODO: Shared Components:
-  ☐ Teacher Card
-  ☐ Course Card
-  ☐ User Profile Card
-  ☐ Cookie Store
+  TODO: Donate: @critical
+    ☐ create basic one time donation payment service
+    ☐ add CoinBase Donation Option
+    ☐ create advanced monthly donation payment service????
+
+  TODO: FAQ: @critical
+    ☐ create list of faq's
+    ☐ add faq list to database as json
+    ☐ Interactive FAQ Forms
+
+  TODO: User: @critical
+    ☐ Create USER data properties:
+    ☐ Dashboard (chore: finish)
+    ☐ Profile (chore: finish)
+    ☐ Account (chore: finish)
+    ☐ Courses (chore: finish)
+
+  TODO: Features:@high
+    ☐ Avatar uploader and customizer (WIP)
+    ☐ PFP Gifs???
+    ☐ Theme Changer (Light/Dark/Contrast)
+
+  TODO: Auth/Security: @critical
+    ☐ Route Guards (WIP)
+    ☐ Cookie Service
+    ☐ Local Storage
+
+  TODO: Shared Components: @low
+    ☐ Teacher Card
+    ☐ Course Card
+    ☐ User Profile Card
+    ☐ Cookie Store
+
+  TODO: News Center Bullitin Board / Articles: @high
+    ☐ Dashboard to create and edit posts
+    ☐ Database using Firebase RealTime DB
+
+  TODO: Welcome Brochure:@critical
+    ☐ Brochure Mockup
+    ☐ Brochure Final Design
+    ☐ Add Brochure to website to download
+
+Archive:
+  ✔ Animated SVG Loader @done(22-07-14 02:37)
+  ✔ decide on either PayPal, Square, or Stripe @done(22-07-12 23:22)

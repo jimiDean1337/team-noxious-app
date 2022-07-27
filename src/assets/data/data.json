@@ -177,7 +177,48 @@
       ]
     }
   ],
-  "due-date": "July 14, 2022 00:00:00",
+  "home": {
+    "title": "Helping you <span> decode</span><br> your full <span>potential</span>",
+    "subtitle": "A free, technology centered, online learning platform, offering the absolute best courses, educators, and community available anywhere."
+  },
+  "faq": {
+    "hero": {},
+    "list": [
+      {
+        "q": "Can Team Noxious Academy help me hack my friends, partners, or personal social media accounts?",
+        "a": "No. TNA does not condone nor promote any illegal or immoral actions. Social media accounts are owned by the social media platform (ie: FaceBook, Instagram, Twitter). Hacking those accounts would break that platforms Terms of Service/Terms of Use."
+      },
+      {
+        "q": "I want to get into computer programming. Where should I start?",
+        "a": "Great question! Everyone starts at a different level. This all depends on the individual's preferred learning method, specific career path interest, level of experience, and  the individual's ultimate goal. Based on the above aspects, each student will have their own learning path."
+      },
+      {
+        "q": "I got a message on social media offering free Robux or V-Bucks. Is this real?",
+        "a": "If it sounds too good to be true, then it is. Nine times out of ten, no one is going to give away free monies to random people. Long story short, DONT TRUST IT!"
+      },
+      {
+        "q": "I have a school project that involves coding, but I have no clue where to start. Can you help me?",
+        "a": "Absolutely! Our Educators are here to assist with all of your projects and assignments. We will help, but we will not do it for you."
+      },
+      {
+        "q": "How much does it cost to get help from Team Noxious Academy?",
+        "a": "Nothing! We do not charge for our services. Our Educators volunteer their time and knowledge to help you succeed. Your success is our only goal."
+      },
+      {
+        "q": "I am interested in becoming an Educator for TNA. How do I get started?",
+        "a": "All of TNA Educators meet extensive requirements and their course material is regularly audited for accuracy and quality. If you are interested in becoming an Educator for Team Noxious Academy, click here."
+      },
+      {
+        "q": "Does TNA offer Course completion Certificates?",
+        "a": "Yes. Team Noxious Academy offers course certificates that are recognized by most employers."
+      },
+      {
+        "q": "I've found a bug in your website/platform. Where can I report this?",
+        "a": "If you've found any bugs on any of our platform services, please complete and submit this form. Anyone who finds a substantiated bug will receive a Bug Hunter Badge on their user profile."
+      }
+        ]
+  },
+  "due-date": "July 21, 2022 00:00:00",
   "experience": {
     "containers": []
   },
@@ -191,10 +232,10 @@
     },
     {
       "title": "TNA Courses",
-      "description": "Team Noxious Academy Courses are nearly all free, and created by qualified, expert educators.",
+      "description": "COMING SOON: Team Noxious Academy Courses by qualified, expert educators.",
       "href": "null",
       "routerLink": "/courses",
-      "linkText": "Start Learning"
+      "linkText": "Coming Soon"
     },
     {
       "title": "TNA VideoChat",

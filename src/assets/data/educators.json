@@ -1,0 +1,17 @@
+[
+  {
+    "name": "",
+    "title": "",
+    "bio": "",
+    "img": {
+      "src": "",
+      "alt": ""
+    },
+    "socials": [
+      {"icon": "", "href": ""},
+      {"icon": "", "href": ""},
+      {"icon": "", "href": ""},
+      {"icon": "", "href": ""}
+    ]
+  }
+]

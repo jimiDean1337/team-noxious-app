@@ -7,18 +7,12 @@
               <div class="col-lg-6 co-12">
                   <div class="home-slider">
                     <canvas></canvas>
-
                       <div class="hero-text">
                           <h5 class="" data-aos="fade-up">Start learning today</h5>
-                          <h1 class="" data-aos="fade-up">Helping you <span>
-                                  decode</span><br> your full <span>potential.</span></h1>
-                          <p class="col-md-6" data-aos="fade-up">Coding is a hot topic right now, but where do you even begin?
-                             You will be introduced to the world of coding and
-                             fundamental ideas through this path.
-                               By the end, you'll be able to decide if web development,
-                                game development, or software development is best for you.</p>
+                          <h1 class="" data-aos="fade-up" [innerHTML]="Content?.title | safeHtml"></h1>
+                          <p class="col-md-6" data-aos="fade-up">{{Content?.subtitle}} </p>
                           <div class="button style2 " data-aos="fade-up">
-                              <a href="assets%2Fgeneral%2Ftna-test-guide.txt" download="free_guide" class="btn"><i class="lni lni-download"></i> Download
+                              <a href="assets%2Fgeneral%2Ftna_free_guide.pdf" download="free_guide" class="btn"><i class="lni lni-download"></i> Download
                                   free guide</a>
                           </div>
                       </div>
@@ -90,7 +84,7 @@
               </div>
               <div class="col-lg-4 offset-lg-4 col-md-12 col-12">
                 <p>
-                  <a href="assets%2Fgeneral%2Ftna-test-guide.txt" download="free_guide" class="btn"><i class="lni lni-download"></i> Download the
+                  <a href="assets%2Fgeneral%2Ftna_free_guide.pdf" download="free_guide" class="btn"><i class="lni lni-download"></i> Download the
                     free guide</a>
                 </p>
               </div>
@@ -123,104 +117,31 @@
           <div class="col-12">
               <div class="section-title">
                   <span class="zoomIn" data-aos="fade-up">Online Learning</span>
-                  <h2 class="fadeInUp" data-aos="fade-up">Recent Online Courses</h2>
-                  <p class="fadeInUp" data-aos="fade-up">There are many variations of passages of Lorem
-                      Ipsum available, but the majority have suffered alteration in some form.</p>
+                  <h2 class="fadeInUp" data-aos="fade-up">Courses Coming Soon</h2>
+                  <p class="fadeInUp" data-aos="fade-up">We are working very hard to complete the Team Noxious Academy Courses Feature.
+                    TNA Courses will include dozens of courses, all made by experienced professional educators.
+                    Below are just a few of the lessons you can expect to see from our free courses featured service.</p>
               </div>
           </div>
       </div>
       <div class="single-head">
           <div class="row">
-              <div class="col-lg-4 col-md-6 col-12">
+              <div class="col-lg-4 col-md-6 col-12" *ngFor="let course of Courses$ | async">
                   <!-- Start Single Course -->
                   <div class="single-course fadeInUp" data-aos="fade-up">
                       <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
+                          <a href="course-details.html"><img [src]="course.images[0].src"
                                   alt="#"></a>
                       </div>
                       <div class="content">
-                          <p class="price">$180</p>
+                          <p class="price">{{course.price}}</p>
                           <p class="date">JAN 15, 2023</p>
-                          <h3><a href="course-details.html">Learning to Write as a Professional Author</a></h3>
+                          <h3><a href="course-details.html">{{course.description}}</a></h3>
                       </div>
                   </div>
                   <!-- End Single Course -->
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Start Single Course -->
-                  <div class="single-course fadeInUp" data-aos="fade-up">
-                      <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
-                              alt="#"></a>
-                      </div>
-                      <div class="content">
-                          <p class="price">$250</p>
-                          <p class="date">JAN 10, 2023</p>
-                          <h3><a href="course-details.html">Customer-centric Info-Tech Strategies</a></h3>
-                      </div>
-                  </div>
-                  <!-- End Single Course -->
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Start Single Course -->
-                  <div class="single-course fadeInUp" data-aos="fade-up">
-                      <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
-                              alt="#"></a>
-                      </div>
-                      <div class="content">
-                          <p class="price">Free</p>
-                          <p class="date">JAN 05, 2023</p>
-                          <h3><a href="course-details.html">Open Programming Courses for Everyone.</a></h3>
-                      </div>
-                  </div>
-                  <!-- End Single Course -->
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Start Single Course -->
-                  <div class="single-course fadeInUp" data-aos="fade-up">
-                      <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
-                              alt="#"></a>
-                      </div>
-                      <div class="content">
-                          <p class="price">$300</p>
-                          <p class="date">FEb 10, 2023</p>
-                          <h3><a href="course-details.html">Best Free Web Design Courses & Tutorials Online</a></h3>
-                      </div>
-                  </div>
-                  <!-- End Single Course -->
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Start Single Course -->
-                  <div class="single-course fadeInUp" data-aos="fade-up">
-                      <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
-                              alt="#"></a>
-                      </div>
-                      <div class="content">
-                          <p class="price">Free</p>
-                          <p class="date">MAR 05, 2023</p>
-                          <h3><a href="course-details.html">Full Free Professional Graphics Design Course.</a></h3>
-                      </div>
-                  </div>
-                  <!-- End Single Course -->
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                  <!-- Start Single Course -->
-                  <div class="single-course fadeInUp" data-aos="fade-up">
-                      <div class="course-image">
-                          <a href="course-details.html"><img src="https://via.placeholder.com/370x230"
-                              alt="#"></a>
-                      </div>
-                      <div class="content">
-                          <p class="price">$199</p>
-                          <p class="date">NOV 05, 2023</p>
-                          <h3><a href="course-details.html">Online Digital Marketing Video Courses</a></h3>
-                      </div>
-                  </div>
-                  <!-- End Single Course -->
-              </div>
+
           </div>
           <div class="row">
               <div class="col-12">
@@ -241,9 +162,8 @@
           <div class="col-12">
               <div class="section-title align-center gray-bg">
                   <span class="zoomIn" data-aos="fade-up">Teachers</span>
-                  <h2 class="fadeInUp" data-aos="fade-up">Our Experienced Advisors</h2>
-                  <p class="fadeInUp" data-aos="fade-up">There are many variations of passages of Lorem
-                      Ipsum available, but the majority have suffered alteration in some form.</p>
+                  <h2 class="fadeInUp" data-aos="fade-up">Our Experienced Educators</h2>
+                  <p class="fadeInUp" data-aos="fade-up">The real value of Team Noxious Academy comes from our educators. Not only do they provide up-to-date, stimulating courses, but they also make themselves available on the forum, and in VoiceChat everyday.</p>
               </div>
           </div>
       </div>
@@ -646,13 +566,13 @@
       <div class="row align-items-center">
           <div class="col-lg-8 col-md-8 col-12">
               <div class="call-content">
-                  <h2>Ready to dive in? <br>Start your free trial today.</h2>
+                  <h2>Ready to dive in? <br>Become a member for free today.</h2>
               </div>
           </div>
           <div class="col-lg-4 col-md-4 col-12">
               <div class="call-content">
                   <div class="button">
-                      <a href="javascript:void(0)" class="btn">Get Started for Free</a>
+                      <a href="javascript:void(0)" class="btn">Join for Free</a>
                   </div>
               </div>
           </div>

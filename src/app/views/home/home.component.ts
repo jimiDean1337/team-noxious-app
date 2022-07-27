@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { Title } from '@angular/platform-browser';
+import { BehaviorSubject, first, map, Observable, tap } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
 import { ICourse } from 'src/app/shared/interfaces/course';
 
@@ -13,11 +14,23 @@ export class HomeComponent implements OnInit {
   Achievements$: any;
   Features$: any;
   Courses$: any;
+  Content$: any;
+  Content: any = {};
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private title: Title) {
     this.Achievements$ = new Observable();
     this.Features$ = new Observable();
     this.Courses$ = new Observable();
+  }
+
+  private get content() {
+    return this.Content$ = this.dataService.getDBObject('home')
+    .valueChanges()
+    .pipe(
+      first(),
+      map((data: any) => this.Content = data),
+      tap(res => console.log("Get Content", res)),
+      );
   }
 
   private get courses() {
@@ -40,9 +53,20 @@ export class HomeComponent implements OnInit {
     return this.achievements;
   }
 
+  public getContent() {
+    return this.content;
+  }
+
+  public getCourses() {
+    return this.courses;
+  }
+
   ngOnInit(): void {
     this.getFeatures();
     this.getAchievements();
+    this.getCourses()
+    this.getContent().subscribe();
+    this.title.setTitle('Home | Team Noxious Academy - Tech Education For Everyone')
     // Initialising the canvas
     let canvas: any = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');

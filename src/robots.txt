@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://teamnoxious.com/home
+Sitemap: https://teamnoxious.com/about
+Sitemap: https://teamnoxious.com/teachers
+Sitemap: https://teamnoxious.com/contact
+Sitemap: https://teamnoxious.com/donate
+Sitemap: https://teamnoxious.com/faq

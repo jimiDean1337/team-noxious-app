@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  heroBackgroundImgSrc: string = 'assets/images/hero/tna-about.png';
+  public breadcrumb = {
+    pageTitle: 'About Us',
+    currentLocation: 'About Us',
+    pageDescription: 'About Team Noxious Academy, online learning platform.',
+    imgSrc: 'assets/images/hero/tna-about.png'
+  }
+
   constructor() { }
 
   ngOnInit(): void {

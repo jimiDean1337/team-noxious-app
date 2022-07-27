@@ -1,3 +1,7 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/utilities";
+
 /*======================================
     Variables
 ========================================*/
@@ -31,8 +35,9 @@ $theme-color-style2: $orange;
 
 $border-color: #F4EEFB;
 
-//Body Color
-$body-color: #888;
+//Body Background-Color Dark
+// $body-bg: rgb(66, 66, 66);
+
 
 // Heading Color
 $heading-color: #161C2D;

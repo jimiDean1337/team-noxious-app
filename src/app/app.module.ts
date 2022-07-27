@@ -36,6 +36,7 @@ import { PasswordResetModule } from './views/password-reset/password-reset.modul
 import { VerifyEmailModule } from './views/verify-email/verify-email.module';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { RankingsModule } from './views/rankings/rankings.module';
 // import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     PasswordResetModule,
     VerifyEmailModule,
+    RankingsModule,
   ],
   providers: [
     CookieService,
