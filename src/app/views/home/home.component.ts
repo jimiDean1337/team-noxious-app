@@ -11,7 +11,7 @@ import { ICourse } from 'src/app/shared/interfaces/course';
 })
 export class HomeComponent implements OnInit {
   counter = new BehaviorSubject(0);
-  Achievements$: any;
+  Achievements$: Observable<any>;
   Features$: any;
   Courses$: any;
   Content$: any;
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   private get courses() {
-    return this.Courses$ = this.dataService.getDBList('courses').valueChanges().pipe(tap(res => console.log("Get Courses", res)));
+    return this.Courses$ = this.dataService.getDBList('courses').valueChanges().pipe(tap((res: ICourse) => console.log("Get Courses", res)));
   }
 
   private get achievements() {
@@ -62,6 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.getFeatures();
     this.getAchievements();
     this.getCourses()

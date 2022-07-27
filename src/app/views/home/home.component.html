@@ -36,7 +36,7 @@
                     <h3 *ngIf="item.href !== 'null'"><a [href]="item.href" target="_blank">{{item.title}}</a></h3>
                     <h3 *ngIf="item.href === 'null'"><a [routerLink]="item.routerLink" target="_blank">{{item.title}}</a></h3>
 
-                    <p>{{item.description}}</p>
+                    <p [innerHTML]="item.description | safeHtml"></p>
                     <div class="button">
                       <a *ngIf="item.href !== 'null'" [href]="item.href" target="_blank" class="btn">{{item.linkText}} <i
                         class="lni lni-arrow-right"></i></a>

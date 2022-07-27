@@ -8,6 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { PasswordResetComponent } from './views/password-reset/password-reset.component';
+import { RankingsComponent } from './views/rankings/rankings.component';
 import { RegistrationComponent } from './views/registration/registration.component';
 import { UserComponent } from './views/user/user.component';
 import { UserModule } from './views/user/user.module';
@@ -34,10 +35,10 @@ const routes: Routes = [
     path: 'faq',
     component: FaqComponent
   },
-  // {
-  //   path: 'user',
-  //   loadChildren: () => import('./views/user/user.module').then(module => UserModule)
-  // },
+  {
+    path: 'rankings',
+    component: RankingsComponent
+  },
   {
     path: 'login',
     component: LoginComponent

@@ -57,7 +57,7 @@ export class AuthService {
       if (result) {
         this.notifications.success(`Yes! A password reset link has been sent to ${email}.`)
       } else {
-        this.notifications.success(`Oops! Cannot find an account linked to ${email}. Please, try again.`)
+        this.notifications.error(`Oops! Cannot find an account linked to ${email}. Please, try again.`)
       }
     }))
 
