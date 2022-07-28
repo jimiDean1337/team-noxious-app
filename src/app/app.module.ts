@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -16,7 +17,6 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './views/login/login.module';
 import { CoreModule } from './core/core.module';
@@ -37,6 +37,7 @@ import { VerifyEmailModule } from './views/verify-email/verify-email.module';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { RankingsModule } from './views/rankings/rankings.module';
+import { AppRoutingModule } from './app-routing.module';
 // import { TagInputModule } from 'ngx-chips';
 @NgModule({
   declarations: [
@@ -79,10 +80,10 @@ import { RankingsModule } from './views/rankings/rankings.module';
     RegistrationModule,
     FaqModule,
     PageNotFoundModule,
-    AppRoutingModule,
     PasswordResetModule,
     VerifyEmailModule,
     RankingsModule,
+    AppRoutingModule,
   ],
   providers: [
     CookieService,

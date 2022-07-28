@@ -24,6 +24,8 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { CodingLanguagesGridComponent } from './components/coding-languages-grid/coding-languages-grid.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { DonationsComponent } from './components/donations/donations.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 
@@ -35,13 +37,15 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     AvatarCustomizerComponent,
     CodingLanguagesGridComponent,
     SafeHtmlPipe,
+    DonationsComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMasonryModule
+    NgxMasonryModule,
+    NgxPayPalModule
   ],
   exports: [
     CommonModule,
@@ -70,6 +74,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     AvatarCustomizerComponent,
     CodingLanguagesGridComponent,
     SafeHtmlPipe,
+    DonationsComponent,
   ]
 })
 export class SharedModule { }

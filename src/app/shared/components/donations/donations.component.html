@@ -1,0 +1,13 @@
+<!-- start Donations Component -->
+<div>
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'PAYPAL'">
+      <ngx-paypal [config]="config"></ngx-paypal>
+    </div>
+    <div *ngSwitchCase="'PAYPAL'">
+      <ngx-paypal [config]="config"></ngx-paypal>
+    </div>
+    <div *ngSwitchDefault>output2</div>
+  </div>
+</div>
+<!-- end Donations Component -->

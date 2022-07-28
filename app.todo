@@ -1,20 +1,20 @@
   TODO: Home: @critical
-    ☐ Finish dynamic content templating
+    ✔ Finish dynamic content templating @done(22-07-27 23:25)
   TODO: About: @high
       ☐ work with Exec Secretary to generate tna seo driven content (text only)
       ☐ search for appropriate images, using stock photos if needed
 
-  TODO: Courses: @high
+  TODO: Courses: @low
       ☐ create a course list
       ☐ add course list to database as json
 
   TODO: Teachers: @high
       ☐ create a teachers list
-      ☐ add teachers list to databse as json
+      ☐ add teachers list to database as json
 
   TODO: Contact: @critical
     ☐ Create Contact Autoresponse email template
-    ☐ Create contact autoresponse mailer module
+    ✔ Create Subscriber autoresponse mailer module @done(22-07-27 23:26)
 
   TODO: Donate: @critical
     ☐ create basic one time donation payment service
@@ -27,11 +27,11 @@
     ☐ Interactive FAQ Forms
 
   TODO: User: @critical
-    ☐ Create USER data properties:
-    ☐ Dashboard (chore: finish)
-    ☐ Profile (chore: finish)
-    ☐ Account (chore: finish)
-    ☐ Courses (chore: finish)
+    ✔ Create USER data properties: @done(22-07-27 23:28)
+    ☐ Dashboard (chore: finish) 75% Done
+    ☐ Profile (chore: finish) 90% Done
+    ☐ Account (chore: finish) 50%
+    ☐ Courses (chore: finish) 50%
 
   TODO: Features:@high
     ☐ Avatar uploader and customizer (WIP)
@@ -54,9 +54,9 @@
     ☐ Database using Firebase RealTime DB
 
   TODO: Welcome Brochure:@critical
-    ☐ Brochure Mockup
-    ☐ Brochure Final Design
-    ☐ Add Brochure to website to download
+    ✔ Brochure Mockup @done(22-07-27 23:30)
+    ✔ Brochure Final Design @done(22-07-27 23:30)
+    ✔ Add Brochure to website to download @done(22-07-27 23:30)
 
 Archive:
   ✔ Animated SVG Loader @done(22-07-14 02:37)
