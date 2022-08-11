@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentRef, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import * as AOS from 'aos';
@@ -6,6 +6,8 @@ import { filter, Observable, tap } from 'rxjs';
 import { AuthService } from './core/services/auth.service';
 import { NotificationsService } from './core/services/notifications.service';
 import { map } from 'rxjs/operators';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'tna-root',
@@ -13,14 +15,14 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  @ViewChild(NavbarComponent) private navbarComponent!: NavbarComponent;
   title = 'Team Noxious Academy';
   loading = false;
-  showMobileMenu: boolean = false;
   navStart: any;
   isLoggedIn: any;
   showToTopBtn: boolean = true;
 
-  constructor(private http: HttpClient, private authService: AuthService, private router: Router, private notifications: NotificationsService) {
+  constructor(private http: HttpClient, private cookie: CookieService, private authService: AuthService, private router: Router, private route: ActivatedRoute, private notifications: NotificationsService) {
     this.navStart = router.events.pipe(
       filter(evt => evt instanceof NavigationStart)
     ) as Observable<NavigationStart>;
@@ -34,17 +36,13 @@ export class AppComponent implements OnInit {
     })
   }
 
-  public get loggedIn() {
-    return this.authService.getUserAuth;
-  }
+  // public get loggedIn() {
+  //   return this.authService.getUserAuth;
+  // }
 
-  public getAuthState() {
-    return this.loggedIn;
-  }
-
-  public toggleMobileNav() {
-    this.showMobileMenu = !this.showMobileMenu;
-  }
+  // public getAuthState() {
+  //   return this.loggedIn;
+  // }
 
   public scrollToTop() {
     window.scrollTo({
@@ -58,21 +56,27 @@ export class AppComponent implements OnInit {
       duration: 800,
       once: true
     })
-    // Get auth state if it exists
-    this.getAuthState()
-    .pipe(
-      tap(user => {
-        console.log(user)
-      })
-    );
 
-    this.navStart.subscribe(() => {
+    this.cookie.set('PHPSESSID', 'fcKNd1p5h1t1337h4xx0r')
+    // Get auth state if it exists
+    // this.getAuthState()
+    // .pipe(
+    //   tap(user => {
+    //     console.log(user)
+    //   })
+    // );
+
+    this.navStart.subscribe((e: any) => {
+      let location = e;
+      console.log('location', location)
+      let loadTime = location.url.includes('home') ? 3500 : 1250;
       this.loading = true;
-      this.showMobileMenu = false;
+      this.navbarComponent.showMobileMenu = false;
+      console.log('Navbar Closed', this.navbarComponent)
       this.scrollToTop()
       setTimeout(() => {
         this.loading = false;
-      }, 3500)
+      }, loadTime)
     })
 
     window.onscroll = (ev: any) => {

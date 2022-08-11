@@ -39,22 +39,22 @@ const routes: Routes = [
     path: 'rankings',
     component: RankingsComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'registration',
-    component: RegistrationComponent
-  },
-  {
-    path: 'password-reset',
-    component: PasswordResetComponent
-  },
-  {
-    path: 'verify-email',
-    component: VerifyEmailComponent
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
+  // {
+  //   path: 'registration',
+  //   component: RegistrationComponent
+  // },
+  // {
+  //   path: 'password-reset',
+  //   component: PasswordResetComponent
+  // },
+  // {
+  //   path: 'verify-email',
+  //   component: VerifyEmailComponent
+  // },
   {
     path: '',
     redirectTo: '/home',

@@ -8,28 +8,28 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserComponent } from './user.component';
 
 const routes: Routes = [
-  {
-    path: 'user/:userId',
-    component: UserComponent,
-    children: [
-      {
-        path: 'profile',
-        component: ProfileComponent,
-      },
-      {
-        path: 'account',
-        component: AccountComponent,
-      },
-      {
-        path: 'courses',
-        component: CoursesComponent,
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-    ]
-  },
+  // {
+  //   path: 'user/:userId',
+  //   component: UserComponent,
+  //   children: [
+  //     {
+  //       path: 'profile',
+  //       component: ProfileComponent,
+  //     },
+  //     {
+  //       path: 'account',
+  //       component: AccountComponent,
+  //     },
+  //     {
+  //       path: 'courses',
+  //       component: CoursesComponent,
+  //     },
+  //     {
+  //       path: 'dashboard',
+  //       component: DashboardComponent
+  //     },
+  //   ]
+  // },
 ];
 
 @NgModule({
