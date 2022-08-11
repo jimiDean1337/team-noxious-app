@@ -25,7 +25,7 @@ import { CodingLanguagesGridComponent } from './components/coding-languages-grid
 import { ToastrModule } from 'ngx-toastr';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { DonationsComponent } from './components/donations/donations.component';
-import { NgxPayPalModule } from 'ngx-paypal';
+// import { NgxPayPalModule } from 'ngx-paypal';
 
 
 
@@ -45,7 +45,7 @@ import { NgxPayPalModule } from 'ngx-paypal';
     FormsModule,
     ReactiveFormsModule,
     NgxMasonryModule,
-    NgxPayPalModule
+    // NgxPayPalModule
   ],
   exports: [
     CommonModule,

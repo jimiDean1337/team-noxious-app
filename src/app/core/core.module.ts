@@ -3,7 +3,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxPayPalModule } from 'ngx-paypal';
+// import { NgxPayPalModule } from 'ngx-paypal';
 // import { NgxStripeModule } from 'ngx-stripe';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -20,7 +20,7 @@ import { environment } from 'src/environments/environment';
   declarations: [],
   imports: [
     HttpClientModule,
-    NgxPayPalModule,
+    // NgxPayPalModule,
     // NgxStripeModule.forRoot(environment.stripe_publishable_key),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),

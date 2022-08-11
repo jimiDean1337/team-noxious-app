@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  IPayPalConfig,
-  ICreateOrderRequest
-} from 'ngx-paypal';
+// import {
+//   IPayPalConfig,
+//   ICreateOrderRequest
+// } from 'ngx-paypal';
 
 @Component({
   selector: 'tna-donations',
@@ -11,14 +11,14 @@ import {
 })
 export class DonationsComponent implements OnInit {
   @Input() type: 'PAYPAL'|'STRIPE'|'CRYPTO'| string = 'PAYPAL';
-  @Input() config?: IPayPalConfig;
+  // @Input() config?: IPayPalConfig;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   private initConfig() {
-    this.config
+    // this.config
   }
 
 }
